@@ -1,0 +1,101 @@
+# Trauma Desert Project Configuration
+# All analysis parameters in one place for reproducibility
+
+# Geographic boundaries
+geography:
+  city: "Philadelphia"
+  state: "PA"
+  fips_state: "42"
+  fips_county: "101"
+  fips_full: "42101"
+  # Philadelphia bounding box for coordinate validation
+  bbox:
+    min_lat: 39.86
+    max_lat: 40.14
+    min_lng: -75.28
+    max_lng: -74.95
+  # Map center
+  center:
+    lat: 39.9526
+    lng: -75.1652
+  default_zoom: 11
+
+# Temporal range
+temporal:
+  start_year: 2015
+  # Set to null for "present" (will use latest available)
+  end_year: null
+
+# Isochrone settings
+isochrones:
+  # Time intervals in minutes
+  intervals: [5, 10, 15, 20, 30]
+  # Driving profile for OpenRouteService
+  profile: "driving-car"
+  # Rate limiting (requests per second)
+  rate_limit: 0.5
+
+# Analysis settings
+analysis:
+  # Golden hour threshold in minutes
+  golden_hour_threshold: 20
+  # Trauma desert score weights (density vs time, must sum to 1.0)
+  desert_score_weights:
+    density: 0.5
+    time: 0.5
+  # Emerging hotspot detection thresholds
+  emerging_hotspot:
+    baseline_max: 5    # Max shootings in first year
+    recent_min: 10     # Min avg shootings in recent period
+
+# Visualization settings
+visualization:
+  # Bivariate color palette (Stevens Blue-Green)
+  bivariate_colors:
+    "1": "#e8e8e8"  # Low density, Low time
+    "2": "#b5c0da"  # Low density, Med time
+    "3": "#6c83b5"  # Low density, High time
+    "4": "#b8d6be"  # Med density, Low time
+    "5": "#90b2b3"  # Med density, Med time
+    "6": "#567994"  # Med density, High time
+    "7": "#73ae80"  # High density, Low time
+    "8": "#5a9178"  # High density, Med time
+    "9": "#2a5a5b"  # High density, High time (TRAUMA DESERT)
+  
+  # Isochrone colors (gradient from good access to poor access)
+  isochrone_colors:
+    5: "#1a9850"   # Dark green - excellent access
+    10: "#91cf60"  # Light green
+    15: "#fee08b"  # Yellow
+    20: "#fc8d59"  # Orange
+    30: "#d73027"  # Red - poor access
+
+  # Trauma center marker colors
+  trauma_markers:
+    level_1: "#e41a1c"  # Red
+    level_2: "#ff7f00"  # Orange
+    level_3: "#999999"  # Gray
+
+  # Map export settings
+  export:
+    dpi: 300
+    format: ["png", "pdf"]
+
+# Data sources (URLs for reference, actual downloads handled by scripts)
+data_sources:
+  shootings:
+    name: "OpenDataPhilly - Shooting Victims"
+    url: "https://www.opendataphilly.org/datasets/shooting-victims/"
+  trauma_centers:
+    name: "Pennsylvania Trauma Systems Foundation"
+    url: "https://www.ptsf.org/accreditation/trauma-center-list/"
+  census_tracts:
+    name: "Census TIGER/Line Files"
+    url: "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
+  census_demographics:
+    name: "American Community Survey 5-Year Estimates"
+    url: "https://data.census.gov/"
+
+# Random seed for reproducibility
+random_seed: 42
+

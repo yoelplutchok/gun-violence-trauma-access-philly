@@ -1,0 +1,8 @@
+hospital_name,address,city,state,zip,trauma_level,designation,notes,latitude,longitude
+Temple University Hospital,3401 North Broad Street,Philadelphia,PA,19140,I,Adult,Primary trauma center for North Philadelphia - verified PTSF 2025,40.004733288938,-75.152148902046
+Penn Presbyterian Medical Center,51 North 39th Street,Philadelphia,PA,19104,I,Adult,West Philadelphia/University City - verified PTSF 2025,39.957216653887,-75.19947039462
+Thomas Jefferson University Hospital,111 South 11th St,Philadelphia,PA,19107,I,Adult,Center City Philadelphia - verified PTSF 2025,39.949674609229,-75.158673630059
+Jefferson Einstein Philadelphia Hospital,5501 Old York Rd,Philadelphia,PA,19141,I,Adult,North Philadelphia/Olney area - verified PTSF 2025,40.041600,-75.125300
+St. Christopher's Hospital for Children,160 E Erie Avenue,Philadelphia,PA,19134,I,Pediatric,Pediatric trauma center - North Philadelphia - verified PTSF 2025,40.007263323676,-75.128976223741
+Children's Hospital of Philadelphia,34th Street and Civic Center Boulevard,Philadelphia,PA,19104,I,Pediatric,Pediatric trauma center - University City - verified PTSF 2025,39.948800,-75.193700
+Jefferson Torresdale Hospital,10800 Knights Road,Philadelphia,PA,19114,II,Adult,Far Northeast Philadelphia - verified PTSF 2025,40.089400,-74.985500

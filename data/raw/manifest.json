@@ -1,0 +1,13 @@
+{
+  "downloads": [
+    {
+      "filename": "shootings_2025-12-25.csv",
+      "source_url": "https://www.opendataphilly.org/datasets/shooting-victims/",
+      "download_timestamp": "2025-12-25T23:07:34.386287",
+      "file_hash_md5": "636a396656bd6f4a73c7b567c9104d9a",
+      "row_count": 17410,
+      "date_range": "2015-01-01 to 2025-12-23",
+      "notes": "Philadelphia shooting victims from OpenDataPhilly CARTO API"
+    }
+  ]
+}

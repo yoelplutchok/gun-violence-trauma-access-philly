@@ -1,0 +1,409 @@
+GEOID,time_to_nearest,nearest_trauma_center,time_category,time_percentile,within_golden_hour
+42101036501,30,Temple University Hospital,20-30 min,0.971,False
+42101000801,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101026301,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101029200,10,Temple University Hospital,5-10 min,0.491,True
+42101024400,10,Temple University Hospital,5-10 min,0.491,True
+42101033200,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101980200,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101000200,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101000300,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101038100,20,Temple University Hospital,15-20 min,0.906,True
+42101037200,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101038400,30,Temple University Hospital,20-30 min,0.971,False
+42101038700,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101038800,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101038900,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101037900,10,Temple University Hospital,5-10 min,0.491,True
+42101038200,10,Temple University Hospital,5-10 min,0.491,True
+42101038000,10,Temple University Hospital,5-10 min,0.491,True
+42101001001,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101037300,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101038600,20,Temple University Hospital,15-20 min,0.906,True
+42101980400,30,Penn Presbyterian Medical Center,20-30 min,0.971,False
+42101038500,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101025500,15,Temple University Hospital,10-15 min,0.786,True
+42101025600,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101025700,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101025800,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101025900,15,Temple University Hospital,10-15 min,0.786,True
+42101017602,5,Temple University Hospital,0-5 min,0.142,True
+42101017800,10,Temple University Hospital,5-10 min,0.491,True
+42101017900,10,Temple University Hospital,5-10 min,0.491,True
+42101017701,10,Temple University Hospital,5-10 min,0.491,True
+42101035601,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101013402,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101013601,10,Temple University Hospital,5-10 min,0.491,True
+42101008801,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101980500,5,Temple University Hospital,0-5 min,0.142,True
+42101015200,10,Temple University Hospital,5-10 min,0.491,True
+42101018300,15,Temple University Hospital,10-15 min,0.786,True
+42101018400,15,Temple University Hospital,10-15 min,0.786,True
+42101019000,10,Temple University Hospital,5-10 min,0.491,True
+42101019700,5,Temple University Hospital,0-5 min,0.142,True
+42101019100,10,Temple University Hospital,5-10 min,0.491,True
+42101019200,10,Temple University Hospital,5-10 min,0.491,True
+42101020500,5,Temple University Hospital,0-5 min,0.142,True
+42101020600,10,Temple University Hospital,5-10 min,0.491,True
+42101020800,10,Temple University Hospital,5-10 min,0.491,True
+42101019800,5,Temple University Hospital,0-5 min,0.142,True
+42101019900,5,Temple University Hospital,0-5 min,0.142,True
+42101020000,5,Temple University Hospital,0-5 min,0.142,True
+42101020200,5,Temple University Hospital,0-5 min,0.142,True
+42101020300,5,Temple University Hospital,0-5 min,0.142,True
+42101020400,5,Temple University Hospital,0-5 min,0.142,True
+42101021400,15,Temple University Hospital,10-15 min,0.786,True
+42101021500,20,Temple University Hospital,15-20 min,0.906,True
+42101020900,15,Temple University Hospital,10-15 min,0.786,True
+42101021000,15,Temple University Hospital,10-15 min,0.786,True
+42101021100,15,Temple University Hospital,10-15 min,0.786,True
+42101021200,15,Temple University Hospital,10-15 min,0.786,True
+42101016200,5,Temple University Hospital,0-5 min,0.142,True
+42101015600,10,Temple University Hospital,5-10 min,0.491,True
+42101015700,10,Temple University Hospital,5-10 min,0.491,True
+42101015800,10,Temple University Hospital,5-10 min,0.491,True
+42101016100,10,Temple University Hospital,5-10 min,0.491,True
+42101039001,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101016300,5,Temple University Hospital,0-5 min,0.142,True
+42101016400,5,Temple University Hospital,0-5 min,0.142,True
+42101016500,5,Temple University Hospital,0-5 min,0.142,True
+42101016600,5,Temple University Hospital,0-5 min,0.142,True
+42101016002,10,Temple University Hospital,5-10 min,0.491,True
+42101016001,10,Temple University Hospital,5-10 min,0.491,True
+42101039002,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101018801,10,Temple University Hospital,5-10 min,0.491,True
+42101004104,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101004103,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101980001,10,Temple University Hospital,5-10 min,0.491,True
+42101980702,15,Thomas Jefferson University Hospital,10-15 min,0.786,True
+42101989200,15,Thomas Jefferson University Hospital,10-15 min,0.786,True
+42101000102,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101036901,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101001204,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101036902,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101012502,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101020702,10,Temple University Hospital,5-10 min,0.491,True
+42101013702,10,Temple University Hospital,5-10 min,0.491,True
+42101020701,10,Temple University Hospital,5-10 min,0.491,True
+42101018802,10,Temple University Hospital,5-10 min,0.491,True
+42101014201,10,Temple University Hospital,5-10 min,0.491,True
+42101980901,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101014202,10,Temple University Hospital,5-10 min,0.491,True
+42101000101,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101980002,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101000404,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101000805,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101012501,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101000403,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101000701,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101000806,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101989300,5,Temple University Hospital,0-5 min,0.142,True
+42101030501,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101016901,10,Temple University Hospital,5-10 min,0.491,True
+42101017000,10,Temple University Hospital,5-10 min,0.491,True
+42101017100,5,Temple University Hospital,0-5 min,0.142,True
+42101017202,5,Temple University Hospital,0-5 min,0.142,True
+42101027401,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101020101,5,Temple University Hospital,0-5 min,0.142,True
+42101028901,10,Temple University Hospital,5-10 min,0.491,True
+42101016702,5,Temple University Hospital,0-5 min,0.142,True
+42101021700,20,Temple University Hospital,15-20 min,0.906,True
+42101021900,30,Temple University Hospital,20-30 min,0.971,False
+42101022000,30,Temple University Hospital,20-30 min,0.971,False
+42101023700,15,Temple University Hospital,10-15 min,0.786,True
+42101023900,15,Temple University Hospital,10-15 min,0.786,True
+42101024000,10,Temple University Hospital,5-10 min,0.491,True
+42101024100,10,Temple University Hospital,5-10 min,0.491,True
+42101024600,10,Temple University Hospital,5-10 min,0.491,True
+42101008802,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101021600,20,Temple University Hospital,15-20 min,0.906,True
+42101023100,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101023500,15,Temple University Hospital,10-15 min,0.786,True
+42101023600,15,Temple University Hospital,10-15 min,0.786,True
+42101014900,10,Temple University Hospital,5-10 min,0.491,True
+42101014700,10,Temple University Hospital,5-10 min,0.491,True
+42101014800,10,Temple University Hospital,5-10 min,0.491,True
+42101024200,10,Temple University Hospital,5-10 min,0.491,True
+42101024300,10,Temple University Hospital,5-10 min,0.491,True
+42101024500,10,Temple University Hospital,5-10 min,0.491,True
+42101017300,5,Temple University Hospital,0-5 min,0.142,True
+42101017400,5,Temple University Hospital,0-5 min,0.142,True
+42101017500,5,Temple University Hospital,0-5 min,0.142,True
+42101017601,5,Temple University Hospital,0-5 min,0.142,True
+42101024700,10,Temple University Hospital,5-10 min,0.491,True
+42101024900,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101025200,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101025400,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101980701,15,Thomas Jefferson University Hospital,10-15 min,0.786,True
+42101001203,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101001302,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101013701,10,Temple University Hospital,5-10 min,0.491,True
+42101980003,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101001301,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101000702,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101038301,5,Temple University Hospital,0-5 min,0.142,True
+42101014600,10,Temple University Hospital,5-10 min,0.491,True
+42101980904,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101039100,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101980902,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101980903,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101980906,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101980905,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101036700,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101037800,15,Temple University Hospital,10-15 min,0.786,True
+42101014500,10,Temple University Hospital,5-10 min,0.491,True
+42101021800,30,Temple University Hospital,20-30 min,0.971,False
+42101021300,20,Temple University Hospital,15-20 min,0.906,True
+42101037600,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101031200,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101009100,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101033600,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101004202,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101016800,5,Temple University Hospital,0-5 min,0.142,True
+42101007000,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101029100,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101980100,20,Temple University Hospital,15-20 min,0.906,True
+42101030000,15,Temple University Hospital,10-15 min,0.786,True
+42101013300,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101026400,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101026500,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101026100,15,Temple University Hospital,10-15 min,0.786,True
+42101026200,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101026302,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101026600,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101026700,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101026900,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101027100,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101027200,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101027300,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101036201,30,Temple University Hospital,20-30 min,0.971,False
+42101028500,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101028600,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101028700,5,Temple University Hospital,0-5 min,0.142,True
+42101012201,15,Temple University Hospital,10-15 min,0.786,True
+42101007101,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101002801,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101030200,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101036202,30,Temple University Hospital,20-30 min,0.971,False
+42101027700,10,Temple University Hospital,5-10 min,0.491,True
+42101027800,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101028000,10,Temple University Hospital,5-10 min,0.491,True
+42101027600,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101028200,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101028400,5,Temple University Hospital,0-5 min,0.142,True
+42101029000,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101029300,10,Temple University Hospital,5-10 min,0.491,True
+42101029400,10,Temple University Hospital,5-10 min,0.491,True
+42101036203,30,Temple University Hospital,20-30 min,0.971,False
+42101009801,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101029800,15,Temple University Hospital,10-15 min,0.786,True
+42101029900,15,Temple University Hospital,10-15 min,0.786,True
+42101030100,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101030600,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101036301,30,Temple University Hospital,20-30 min,0.971,False
+42101036302,30,Temple University Hospital,20-30 min,0.971,False
+42101031800,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101036303,30,Temple University Hospital,20-30 min,0.971,False
+42101036400,30,Temple University Hospital,20-30 min,0.971,False
+42101030700,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101030800,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101030900,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101031000,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101031300,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101031600,15,Temple University Hospital,10-15 min,0.786,True
+42101031700,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101032000,15,Temple University Hospital,10-15 min,0.786,True
+42101032100,15,Temple University Hospital,10-15 min,0.786,True
+42101032500,15,Temple University Hospital,10-15 min,0.786,True
+42101032600,20,Temple University Hospital,15-20 min,0.906,True
+42101989100,30,Thomas Jefferson University Hospital,20-30 min,0.971,False
+42101032900,20,Temple University Hospital,15-20 min,0.906,True
+42101033800,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101033000,20,Temple University Hospital,15-20 min,0.906,True
+42101033300,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101033400,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101033900,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101034000,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101034100,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101008602,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101009802,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101037500,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101018001,10,Temple University Hospital,5-10 min,0.491,True
+42101034200,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101034400,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101034600,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101034701,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101011000,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101011100,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101011300,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101011400,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101012100,15,Temple University Hospital,10-15 min,0.786,True
+42101003002,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101013900,10,Temple University Hospital,5-10 min,0.491,True
+42101011500,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101011800,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101011900,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101012000,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101013100,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101013500,10,Temple University Hospital,5-10 min,0.491,True
+42101031401,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101013401,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101018002,15,Temple University Hospital,10-15 min,0.786,True
+42101013800,10,Temple University Hospital,5-10 min,0.491,True
+42101014100,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101035701,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101035702,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101033701,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101028902,10,Temple University Hospital,5-10 min,0.491,True
+42101033702,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101020102,5,Temple University Hospital,0-5 min,0.142,True
+42101031101,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101031102,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101019502,5,Temple University Hospital,0-5 min,0.142,True
+42101019501,5,Temple University Hospital,0-5 min,0.142,True
+42101033101,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101001102,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101000803,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101017201,5,Temple University Hospital,0-5 min,0.142,True
+42101980800,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101005600,20,Penn Presbyterian Medical Center,15-20 min,0.906,True
+42101000500,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101034803,30,Temple University Hospital,20-30 min,0.971,False
+42101006000,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101006100,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101006300,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101033102,20,Temple University Hospital,15-20 min,0.906,True
+42101031501,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101008601,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101037700,5,Temple University Hospital,0-5 min,0.142,True
+42101010700,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101010800,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101010600,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101005400,20,Penn Presbyterian Medical Center,15-20 min,0.906,True
+42101005500,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101006400,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101026800,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101014400,10,Temple University Hospital,5-10 min,0.491,True
+42101036600,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101001201,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101012204,15,Temple University Hospital,10-15 min,0.786,True
+42101012203,15,Temple University Hospital,10-15 min,0.786,True
+42101013602,10,Temple University Hospital,5-10 min,0.491,True
+42101034502,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101000902,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101002702,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101014300,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101028100,10,Temple University Hospital,5-10 min,0.491,True
+42101035302,30,Temple University Hospital,20-30 min,0.971,False
+42101002000,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101036502,30,Temple University Hospital,20-30 min,0.971,False
+42101001101,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101027402,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101000401,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101034501,20,Temple University Hospital,15-20 min,0.906,True
+42101000901,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101017702,10,Temple University Hospital,5-10 min,0.491,True
+42101014000,10,Temple University Hospital,5-10 min,0.491,True
+42101023800,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101010900,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101024800,10,Temple University Hospital,5-10 min,0.491,True
+42101033500,15,Jefferson Einstein Philadelphia Hospital,10-15 min,0.786,True
+42101007700,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101003001,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101002802,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101002701,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101980600,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101034702,20,Temple University Hospital,15-20 min,0.906,True
+42101026000,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101027500,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101034801,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101034802,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101034900,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101035100,30,Temple University Hospital,20-30 min,0.971,False
+42101035200,30,Temple University Hospital,20-30 min,0.971,False
+42101980300,30,Temple University Hospital,20-30 min,0.971,False
+42101035500,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101035800,30,Temple University Hospital,20-30 min,0.971,False
+42101035900,30,Temple University Hospital,20-30 min,0.971,False
+42101036000,30,Temple University Hospital,20-30 min,0.971,False
+42101036100,30,Temple University Hospital,20-30 min,0.971,False
+42101001800,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101001900,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101002100,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101002200,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101002400,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101002900,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101003100,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101003200,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101003300,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101008200,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101008301,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101003600,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101004002,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101004101,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101011200,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101009400,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101006500,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101006600,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101006700,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101007200,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101001600,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101001700,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101007300,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101007400,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101002500,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101007800,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101007900,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101008000,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101003701,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101003702,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101003800,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101003901,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101003902,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101004001,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101015300,10,Temple University Hospital,5-10 min,0.491,True
+42101025300,10,Jefferson Einstein Philadelphia Hospital,5-10 min,0.491,True
+42101035301,30,Temple University Hospital,20-30 min,0.971,False
+42101031900,15,Temple University Hospital,10-15 min,0.786,True
+42101028300,10,Temple University Hospital,5-10 min,0.491,True
+42101008302,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101008400,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101008500,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101009000,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101002300,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101006200,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101032300,15,Temple University Hospital,10-15 min,0.786,True
+42101000600,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101001500,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101009200,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101009300,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101009500,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101009600,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101010000,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101010100,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101010200,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101010300,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101010400,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101010500,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101013200,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101027000,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101035602,20,Jefferson Einstein Philadelphia Hospital,15-20 min,0.906,True
+42101015101,10,Temple University Hospital,5-10 min,0.491,True
+42101015102,10,Temple University Hospital,5-10 min,0.491,True
+42101004201,10,Thomas Jefferson University Hospital,5-10 min,0.491,True
+42101028800,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101011700,15,Penn Presbyterian Medical Center,10-15 min,0.786,True
+42101016902,10,Temple University Hospital,5-10 min,0.491,True
+42101001400,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101007102,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101008701,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101008102,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101031402,15,Temple University Hospital,10-15 min,0.786,True
+42101016701,5,Temple University Hospital,0-5 min,0.142,True
+42101027901,10,Temple University Hospital,5-10 min,0.491,True
+42101027902,10,Temple University Hospital,5-10 min,0.491,True
+42101008702,5,Penn Presbyterian Medical Center,0-5 min,0.142,True
+42101008101,10,Penn Presbyterian Medical Center,5-10 min,0.491,True
+42101001002,5,Thomas Jefferson University Hospital,0-5 min,0.142,True
+42101030502,5,Jefferson Einstein Philadelphia Hospital,0-5 min,0.142,True
+42101031502,15,Temple University Hospital,10-15 min,0.786,True

@@ -1,0 +1,23 @@
+category,check,status,message
+Shooting Data,Record retention,PASS,99.8% retained
+Shooting Data,Null coordinates,PASS,No null coordinates
+Shooting Data,Coordinate bounds,PASS,All points within Philadelphia
+Shooting Data,Date range,PASS,2015-01-01 to 2025-12-23
+Shooting Data,Fatality rate,PASS,20.6% (within expected range)
+Census Tract Data,Tract count,PASS,408 tracts (expected)
+Census Tract Data,Demographics join,PASS,All tracts have demographics
+Census Tract Data,Population total,PASS,"1,593,208 (reasonable for Phila)"
+Census Tract Data,Race percentages,PASS,Percentages valid
+Census Tract Data,Income values,WARN,25 tracts with negative income (Census suppression)
+Spatial Joins,Shooting assignment,PASS,100.0% assigned to tracts
+Spatial Joins,Shooting count preservation,PASS,"Counts match (17,380)"
+Spatial Joins,Density completeness,PASS,All tracts have density values
+Bivariate Classification,Classification completeness,PASS,All tracts classified
+Bivariate Classification,Class coverage,PASS,All 9 classes present
+Bivariate Classification,Trauma desert count,PASS,18 trauma deserts (reasonable)
+Bivariate Classification,density_tercile balance,PASS,Balanced (33%-33%)
+Bivariate Classification,time_tercile balance,PASS,Balanced (33%-33%)
+Transport Times,Time completeness,PASS,All tracts have transport times
+Transport Times,Time range,PASS,5-30 min (reasonable)
+Transport Times,Average time,PASS,11.4 min (reasonable for urban area)
+Transport Times,Trauma center assignment,PASS,All tracts assigned

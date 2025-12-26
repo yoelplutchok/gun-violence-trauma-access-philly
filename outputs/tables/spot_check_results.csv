@@ -1,0 +1,7 @@
+GEOID,NAME,bivariate_class,bivariate_label,priority_category,total_shootings,annual_density,density_tercile,time_to_nearest,time_tercile,nearest_hospital,total_population,pct_black,pct_poverty,fatality_rate
+42101030000,300,9,TRAUMA DESERT,Trauma Desert,253,65.4,High,15,High,Temple University Hospital,8294,57.7,38.0,17.8
+42101016902,169.02,9,TRAUMA DESERT,Trauma Desert,164,68.5,High,10,High,Temple University Hospital,3925,92.4,44.7,20.7
+42101015102,151.02,9,TRAUMA DESERT,Trauma Desert,153,64.7,High,10,High,Temple University Hospital,4930,93.6,37.6,20.3
+42101009000,90,1,"Low burden, Good access",Low Priority,5,2.2,Low,5,Low,Penn Presbyterian Medical Center,7375,15.9,53.8,40.0
+42101015800,158,1,"Low burden, Good access",Low Priority,0,0.0,Low,10,Low,Temple University Hospital,6849,3.1,7.3,
+42101036902,369.02,1,"Low burden, Good access",Low Priority,4,1.0,Low,5,Low,Penn Presbyterian Medical Center,6267,13.9,43.9,0.0
