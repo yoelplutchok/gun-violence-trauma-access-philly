@@ -16,6 +16,13 @@ Methodology:
 4. Quantify impact: tracts that improve, population affected, shootings covered
 5. Rank locations by impact score
 
+IMPORTANT LIMITATIONS:
+- Drive times are ESTIMATED using haversine distance * routing factor / urban speed
+- This is NOT equivalent to actual routing API results (ORS/Mapbox)
+- Results are ILLUSTRATIVE for comparing relative impact between locations
+- For precise planning, actual routing API calls should be used
+- The existing isochrone-based transport times use actual ORS routing
+
 Output:
 - Ranked list of candidate locations by impact
 - Before/after comparison maps

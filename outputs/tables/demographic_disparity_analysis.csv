@@ -2,5 +2,5 @@ analysis,metric,value,comparison,p_value,interpretation
 Correlation,% Black vs Transport Time,-0.24977712412492137,r coefficient,6.043214567142647e-07,Significant
 Correlation,% Black vs Shooting Density,0.39056690828465024,r coefficient,1.2616250057797453e-15,Significant
 Correlation,% Poverty vs Transport Time,-0.3584853932620513,r coefficient,3.0666850680978185e-13,Significant
-T-test,% Black in TD vs Other,4.77091063927047,t-statistic,2.6030506091238184e-06,Significant
-T-test,% Poverty in TD vs Other,2.619603831513827,t-statistic,0.00914943330462147,Significant
+T-test,% Black in TD vs Other,6.156480489637345,t-statistic,5.129202178283977e-06,Significant
+T-test,% Poverty in TD vs Other,3.868630001504039,t-statistic,0.0008802410978675439,Significant

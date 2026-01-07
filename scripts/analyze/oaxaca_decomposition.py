@@ -421,7 +421,8 @@ def run_oaxaca_analysis():
     logger.info("=" * 60)
     
     logger.info(f"\n  🎯 SHOOTING DENSITY GAP:")
-    logger.info(f"     Black tracts have {np.exp(results_shooting['raw_gap']):.1f}x higher shooting density")
+    # Note: ratio is exp(mean(log1p(density))) - geometric mean ratio, not arithmetic
+    logger.info(f"     Black tracts have {np.exp(results_shooting['raw_gap']):.1f}x higher shooting density (geometric mean ratio)")
     logger.info(f"     {results_shooting['pct_explained']:.1f}% explained by poverty/income")
     logger.info(f"     {results_shooting['pct_unexplained']:.1f}% UNEXPLAINED (structural factors)")
     

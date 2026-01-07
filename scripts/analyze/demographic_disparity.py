@@ -97,15 +97,17 @@ def analyze_demographic_disparity() -> Path:
         trauma_deserts = gdf[gdf['bivariate_class'] == 9]
         non_trauma_deserts = gdf[gdf['bivariate_class'] != 9]
         
-        # T-tests for demographic differences
+        # T-tests for demographic differences (Welch's t-test, does not assume equal variance)
         t_black, p_black = stats.ttest_ind(
             trauma_deserts['pct_black'].dropna(),
-            non_trauma_deserts['pct_black'].dropna()
+            non_trauma_deserts['pct_black'].dropna(),
+            equal_var=False  # Welch's t-test
         )
         
         t_poverty, p_poverty = stats.ttest_ind(
             trauma_deserts['pct_poverty'].dropna(),
-            non_trauma_deserts['pct_poverty'].dropna()
+            non_trauma_deserts['pct_poverty'].dropna(),
+            equal_var=False  # Welch's t-test
         )
         
         logger.info("\n  Statistical comparison: Trauma Deserts vs Other Tracts")
