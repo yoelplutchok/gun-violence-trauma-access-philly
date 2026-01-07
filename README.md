@@ -94,8 +94,8 @@ trauma-desert/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/trauma-desert.git
-cd trauma-desert
+git clone https://github.com/yoelplutchok/gun-violence-trauma-access-philly.git
+cd gun-violence-trauma-access-philly
 
 # Create environment (choose one)
 conda env create -f environment.yml
@@ -244,9 +244,9 @@ If you use this analysis in your research, please cite:
 ```bibtex
 @misc{trauma_desert_philly_2025,
   title={Philadelphia Trauma Deserts: Mapping Gun Violence Burden Against Trauma System Capacity},
-  author={[Your Name]},
+  author={Plutchok, Yoel Y.},
   year={2025},
-  url={https://github.com/yourusername/trauma-desert}
+  url={https://github.com/yoelplutchok/gun-violence-trauma-access-philly}
 }
 ```
 
