@@ -217,7 +217,7 @@ def create_bivariate_map() -> Path:
         tc_group = folium.FeatureGroup(name='Level I Trauma Centers')
         
         for _, tc in trauma_centers.iterrows():
-            if tc['trauma_level'] == 'Level I Adult':
+            if tc['trauma_level'] == 'I' and tc.get('designation', '') == 'Adult':
                 folium.CircleMarker(
                     location=[tc['latitude'], tc['longitude']],
                     radius=12,

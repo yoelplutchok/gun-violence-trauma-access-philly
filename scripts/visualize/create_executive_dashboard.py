@@ -230,11 +230,24 @@ def create_executive_dashboard(
     ax_oaxaca.set_title('D. Racial Disparity Decomposition\n(Black tracts have 4.4x higher shooting density)',
                        fontweight='bold', pad=10)
     
-    # Panel E: Golden Hour Coverage
+    # Panel E: Golden Hour Coverage - compute from actual data
     ax_golden = fig.add_subplot(gs[2, 1])
     
-    golden_data = [91.4, 8.2, 0.4]  # Within 10, 10-20, 20+
-    labels = ['<10 min\n(91.4%)', '10-20 min\n(8.2%)', '>20 min\n(0.4%)']
+    # Load golden hour distribution and calculate correct percentages
+    golden_hour_file = PATHS.tables / 'golden_hour_distribution.csv'
+    if golden_hour_file.exists():
+        gh_df = load_csv(golden_hour_file)
+        within_10 = gh_df[gh_df['time_interval'].isin(['0-5 min', '5-10 min'])]['percentage'].sum()
+        within_10_20 = gh_df[gh_df['time_interval'].isin(['10-15 min', '15-20 min'])]['percentage'].sum()
+        beyond_20 = gh_df[gh_df['time_interval'].isin(['20-30 min', '30+ min'])]['percentage'].sum()
+        golden_data = [within_10, within_10_20, beyond_20]
+        within_20_pct = 100 - beyond_20
+    else:
+        # Fallback values based on analysis
+        golden_data = [90.5, 9.2, 0.4]
+        within_20_pct = 99.6
+    
+    labels = [f'<10 min\n({golden_data[0]:.1f}%)', f'10-20 min\n({golden_data[1]:.1f}%)', f'>20 min\n({golden_data[2]:.1f}%)']
     colors_golden = [COLORS['success'], COLORS['warning'], COLORS['accent']]
     
     ax_golden.pie(golden_data, labels=labels, colors=colors_golden,
@@ -243,7 +256,7 @@ def create_executive_dashboard(
     # Add center circle for donut
     centre_circle = plt.Circle((0, 0), 0.5, fc='white')
     ax_golden.add_patch(centre_circle)
-    ax_golden.text(0, 0, '99.6%\nwithin\n20 min', ha='center', va='center',
+    ax_golden.text(0, 0, f'{within_20_pct:.1f}%\nwithin\n20 min', ha='center', va='center',
                   fontsize=12, fontweight='bold')
     
     ax_golden.set_title('E. Golden Hour Coverage\n(Excellent geographic access)', fontweight='bold', pad=10)
@@ -264,7 +277,7 @@ def create_executive_dashboard(
     
     ax_vuln.set_xlabel('Bivariate Class')
     ax_vuln.set_ylabel('Vulnerability Index')
-    ax_vuln.set_title('F. Compound Disadvantage\n(100% of trauma deserts in top quartile)',
+    ax_vuln.set_title('F. Vulnerability by Classification\n(Trauma deserts have highest disadvantage)',
                      fontweight='bold', pad=10)
     ax_vuln.spines['top'].set_visible(False)
     ax_vuln.spines['right'].set_visible(False)

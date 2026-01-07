@@ -14,7 +14,7 @@
 | **Trauma Desert Tracts** | 18 (4.4% of city) |
 | **Affected Population** | 83,159 residents |
 | **Shootings in Deserts** | 1,659 (9.5% of total) |
-| **Temple Hospital Burden** | 54.9% of all shootings |
+| **Temple Modeled Catchment** | 54.9% of shootings (nearest center) |
 | **Unexplained Racial Disparity** | 68.5% |
 
 ### Critical Insight
@@ -118,7 +118,7 @@ make collect    # Download data
 make process    # Clean and transform
 make analyze    # Run analysis
 make visualize  # Generate maps
-make validate   # Quality checks
+make test       # Run validation checks
 ```
 
 ---
@@ -158,16 +158,18 @@ See [docs/methodology.md](docs/methodology.md) for complete details.
 
 ## Key Results
 
-### Hospital Burden Distribution
+### Modeled Hospital Catchment
 
-| Hospital | Shootings | % of City |
-|----------|-----------|-----------|
+*Based on nearest Level I trauma center by isochrone, not actual patient destination data.*
+
+| Hospital | Shootings in Catchment | % of City |
+|----------|------------------------|-----------|
 | Temple University Hospital | 9,544 | **54.9%** |
 | Penn Presbyterian | 4,677 | 26.9% |
 | Jefferson Einstein | 2,262 | 13.0% |
 | Thomas Jefferson | 897 | 5.2% |
 
-Temple University Hospital handles more than half of all gun violence victims in Philadelphia.
+Temple University Hospital is the nearest Level I trauma center for more than half of all shooting locations in Philadelphia.
 
 ### Demographic Disparities
 

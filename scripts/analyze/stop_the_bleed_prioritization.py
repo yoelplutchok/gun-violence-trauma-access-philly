@@ -86,7 +86,7 @@ def identify_priority_zones(gdf: gpd.GeoDataFrame, n_zones: int = 20) -> pd.Data
     priority_zones = gdf.nlargest(n_zones, 'stb_priority_score').copy()
     
     # Calculate potential impact metrics
-    priority_zones['annual_shootings'] = priority_zones['total_shootings'] / 10  # Approximate annual
+    priority_zones['annual_shootings'] = priority_zones['total_shootings'] / 11  # Data spans 2015-2025 (11 years)
     
     # Estimate lives potentially saved (rough estimate based on literature)
     # Assumption: ~15% of GSW fatalities could be prevented with immediate hemorrhage control
@@ -144,7 +144,7 @@ def suggest_training_sites(gdf: gpd.GeoDataFrame, n_zones: int = 20) -> pd.DataF
             'Priority_Rank': int(zone['stb_priority_rank']),
             'Priority_Score': round(zone['stb_priority_score'], 1),
             'Population': int(pop),
-            'Annual_Shootings': round(zone['total_shootings'] / 10, 1),
+            'Annual_Shootings': round(zone['total_shootings'] / 11, 1),  # 11 years of data
             'Transport_Time_Min': round(zone['time_to_nearest'], 1),
             'Recommended_Sites': '; '.join(recommended_sites[:4])  # Top 4
         })
@@ -346,7 +346,7 @@ def run_stop_the_bleed_analysis():
     # Calculate potential impact
     with StepLogger("Estimating potential impact", logger):
         # Rough estimate based on literature
-        annual_shootings_top20 = total_shootings / 10  # Approximate annual
+        annual_shootings_top20 = total_shootings / 11  # Data spans 2015-2025 (11 years)
         potential_lives = annual_shootings_top20 * 0.20 * 0.15  # 20% fatal, 15% preventable
         
         logger.info(f"  Annual shootings in top 20 zones: ~{annual_shootings_top20:.0f}")

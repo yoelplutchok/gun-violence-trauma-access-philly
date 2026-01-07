@@ -47,11 +47,11 @@ setup-conda:
 collect:
 	@echo "Running data collection scripts..."
 	python scripts/collect/download_shootings.py
-	python scripts/collect/compile_trauma_centers.py
 	python scripts/collect/geocode_trauma_centers.py
 	python scripts/collect/download_census_tracts.py
 	python scripts/collect/download_demographics.py
 	@echo "Data collection complete."
+	@echo "Note: Trauma centers are manually compiled in data/manual/"
 
 # Isochrone generation (expensive, run separately)
 isochrones:
@@ -83,9 +83,10 @@ analyze:
 # Visualization
 visualize:
 	@echo "Generating visualizations..."
-	python scripts/visualize/create_interactive_map.py
-	python scripts/visualize/create_static_maps.py
-	python scripts/visualize/create_charts.py
+	python scripts/visualize/create_bivariate_map.py
+	python scripts/visualize/create_isochrone_map.py
+	python scripts/visualize/create_static_figures.py
+	python scripts/visualize/create_flow_map.py
 	@echo "Visualization complete."
 
 # Testing and validation

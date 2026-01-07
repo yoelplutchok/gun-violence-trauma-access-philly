@@ -209,29 +209,27 @@ def analyze_overlap_with_trauma_deserts(gdf: gpd.GeoDataFrame) -> pd.DataFrame:
 
 def calculate_compound_disadvantage_score(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     """
-    Calculate a compound disadvantage score that combines:
-    - Trauma desert status
-    - Vulnerability index
-    - Racial demographics
+    Calculate compound disadvantage based on vulnerability index.
+    
+    NOTE: We do NOT add bonus points for trauma desert status to avoid
+    circular logic. The vulnerability index already captures disadvantage
+    independently, allowing us to test the overlap hypothesis fairly.
     """
     result = gdf.copy()
     
-    # Base score from vulnerability index
+    # Identify trauma deserts
+    result['is_trauma_desert'] = result['bivariate_class'] == 9
+    
+    # Compound score IS the vulnerability index (no artificial boost)
     result['compound_score'] = result['vulnerability_index']
     
-    # Bonus for being a trauma desert (class 9)
-    result['is_trauma_desert'] = result['bivariate_class'] == 9
-    result.loc[result['is_trauma_desert'], 'compound_score'] += 20
-    
-    # Cap at 100
-    result['compound_score'] = result['compound_score'].clip(0, 100)
-    
-    # Rank tracts by compound disadvantage
+    # Rank tracts by vulnerability
     result['compound_rank'] = result['compound_score'].rank(ascending=False, method='min')
     
-    # Identify "compound disadvantage" tracts (top quartile)
-    threshold = result['compound_score'].quantile(0.75)
-    result['is_compound_disadvantage'] = result['compound_score'] >= threshold
+    # Identify "high vulnerability" tracts (top quartile of vulnerability_index)
+    threshold = result['vulnerability_index'].quantile(0.75)
+    result['is_high_vulnerability'] = result['vulnerability_index'] >= threshold
+    result['is_compound_disadvantage'] = result['is_high_vulnerability']  # Alias for compatibility
     
     return result
 

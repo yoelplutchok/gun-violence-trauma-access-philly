@@ -126,11 +126,11 @@ def create_isochrone_map() -> Path:
                 continue
                 
             # Different marker styles by level
-            if 'Level I' in str(tc['trauma_level']):
+            if tc['trauma_level'] == 'I':
                 color = '#e41a1c'
                 radius = 15
                 icon = '🏥'
-            elif 'Level II' in str(tc['trauma_level']):
+            elif tc['trauma_level'] == 'II':
                 color = '#ff7f00'
                 radius = 12
                 icon = '🏨'
