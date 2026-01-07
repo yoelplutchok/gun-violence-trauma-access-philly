@@ -100,3 +100,7 @@ logs/*.log
 .DS_Store
 Thumbs.db
 
+# Internal development files (not for public repo)
+trauma_desert_execution_plan.md
+.cursor/
+

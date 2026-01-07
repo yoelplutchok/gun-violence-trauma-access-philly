@@ -1,0 +1,9 @@
+location_name,lat,lng,tracts_improved,population_improved,shootings_in_improved_tracts,tracts_gained_golden_hour,population_gained_golden_hour,tracts_significant_improvement,trauma_deserts_improved,avg_time_improvement_min,max_time_improvement_min,notes,impact_score,rank
+Hunting Park,40.007,-75.142,46,198932,4998,0,0,0,0,1.6265183252545143,4.209497162773696,Near Temple but potentially fills local gap,309579.6,1
+Kingsessing/Cobbs Creek,39.9401,-75.2248,47,166003,2974,1,0,0,8,4.228498151600884,10.679749162359162,West Philadelphia gap area,238500.9,2
+Tioga/Nicetown,40.01,-75.155,50,174801,3477,0,0,0,2,2.0411795413380083,5.511149940607936,Between Temple and Einstein - high violence area,236290.3,3
+Frankford/Mayfair,40.0248,-75.0801,64,323391,2106,1,1265,0,5,5.143651829159488,12.962703096818696,Northeast gap - between Temple and Torresdale,227949.8,4
+Strawberry Mansion,39.992,-75.175,52,158896,2479,0,0,0,3,3.322205544255552,9.602173338978433,High violence area in trauma desert zone,186618.8,5
+Germantown/Mt. Airy,40.045,-75.175,60,215448,1724,4,10483,2,1,5.7320887394979305,15.276963706397257,Northwest Philadelphia,161075.9,6
+Point Breeze/Grays Ferry,39.932,-75.185,56,188952,1520,0,0,0,3,3.948981618737759,10.139915665078927,South-central gap area,147685.6,7
+Southwest Philadelphia (Eastwick),39.8986,-75.2341,16,49350,625,1,0,3,3,8.413312351048514,24.112720803287303,Far Southwest - currently 20+ min from nearest Level I,61055.0,8

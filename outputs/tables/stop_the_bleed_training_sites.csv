@@ -1,0 +1,21 @@
+GEOID,Tract_Name,Priority_Rank,Priority_Score,Population,Annual_Shootings,Transport_Time_Min,Recommended_Sites
+42101030000,300,1,88.3,8294,25.3,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101033000,330,2,83.2,10323,6.6,20,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101029800,298,3,77.9,5299,8.4,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101017800,178,4,77.8,6592,37.1,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101006300,63,5,77.7,4415,8.9,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101032600,326,6,77.4,7012,4.1,20,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Churches/mosques/temples
+42101029900,299,7,77.3,4475,8.9,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101019200,192,8,75.7,8914,16.2,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101015200,152,9,74.8,5975,20.7,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101032500,325,10,74.3,6195,6.0,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Churches/mosques/temples
+42101006200,62,11,74.2,4394,6.4,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Churches/mosques/temples
+42101008500,85,12,73.3,6515,14.3,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101017702,177.02,13,73.2,4726,24.8,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101006000,60,14,73.1,6440,6.1,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Churches/mosques/temples
+42101028300,283,15,72.6,6545,12.6,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101008302,83.02,16,72.6,4844,14.9,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101026700,267,17,71.9,7518,9.7,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Churches/mosques/temples
+42101011200,112,18,71.5,5307,11.9,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101015102,151.02,19,71.3,4930,15.3,10,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Community health centers
+42101032000,320,20,71.1,7873,2.5,15,Public schools (reach students + staff); Transit stations/bus terminals; Recreation centers; Churches/mosques/temples

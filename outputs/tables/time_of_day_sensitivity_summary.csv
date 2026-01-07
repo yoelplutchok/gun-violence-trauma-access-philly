@@ -1,0 +1,5 @@
+scenario,multiplier,trauma_desert_count,population_affected,shootings_in_deserts,avg_transport_time,max_transport_time,description
+Off-Peak (Baseline),1.0,8,43920,744,11.360294117647058,30.0,"Overnight, mid-day, weekends - free-flow conditions"
+Morning Rush Hour,1.4,8,43920,744,15.904411764705882,42.0,"Commute-in traffic, moderate congestion"
+Evening Rush Hour,1.5,8,43920,744,17.040441176470587,45.0,"Peak congestion, commute-out + errands"
+Overnight,0.9,8,43920,744,10.224264705882353,27.0,"Minimal traffic, slightly faster than baseline"

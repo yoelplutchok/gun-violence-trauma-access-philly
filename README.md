@@ -1,4 +1,4 @@
-# 🏥 Philadelphia Trauma Deserts
+# Philadelphia Trauma Deserts
 
 **Mapping Gun Violence Burden Against Trauma System Capacity**
 
@@ -7,36 +7,39 @@
 
 ---
 
-## 📊 Key Findings
+## Key Findings
 
 | Metric | Value |
 |--------|-------|
 | **Trauma Desert Tracts** | 18 (4.4% of city) |
 | **Affected Population** | 83,159 residents |
 | **Shootings in Deserts** | 1,659 (9.5% of total) |
-| **Avg % Black** | 76% (vs 40% citywide) |
-| **Disparity Ratio** | 1.89x higher Black population |
+| **Temple Hospital Burden** | 54.9% of all shootings |
+| **Unexplained Racial Disparity** | 68.5% |
 
 ### Critical Insight
 
 > **The "trauma desert" problem in Philadelphia is driven primarily by the extreme concentration of gun violence, NOT by poor geographic access to trauma care.**
 >
 > - 99.6% of shootings occur within 20 minutes of Level I trauma
-> - Black neighborhoods are actually *closer* to hospitals on average
-> - The disparity is in **violence burden**, not distance to care
+> - Black neighborhoods are actually 3.2 minutes *closer* to hospitals on average
+> - Black tracts experience 4.4x higher shooting density
+> - 68.5% of this disparity cannot be explained by poverty or income
+> - The problem is **violence burden**, not distance to care
 
 ---
 
-## 🗺️ Interactive Maps
+## Interactive Maps
 
-- **[Bivariate Choropleth Map](outputs/interactive/bivariate_choropleth.html)** - 3×3 classification of violence × access
+- **[Bivariate Choropleth Map](outputs/interactive/bivariate_choropleth.html)** - 3x3 classification of violence vs access
 - **[Isochrone Coverage Map](outputs/interactive/isochrone_coverage.html)** - Drive-time polygons with shooting heatmap
+- **[Patient Flow Map](outputs/interactive/patient_flow_map.html)** - Hospital catchment areas and burden
 
 ![Bivariate Map Preview](outputs/figures/bivariate_map.png)
 
 ---
 
-## 🎯 What is a "Trauma Desert"?
+## What is a "Trauma Desert"?
 
 A **trauma desert** is a census tract that experiences BOTH:
 1. **High gun violence burden** (top tercile of shooting density)
@@ -52,7 +55,7 @@ We use a bivariate classification matrix:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 trauma-desert/
@@ -64,24 +67,24 @@ trauma-desert/
 │   └── manual/           # Manually compiled data
 ├── scripts/
 │   ├── collect/          # Data acquisition
-│   ├── process/          # Data cleaning & transformation
+│   ├── process/          # Data cleaning and transformation
 │   ├── analyze/          # Statistical analysis
-│   ├── visualize/        # Map & chart generation
+│   ├── visualize/        # Map and chart generation
 │   └── validate/         # Quality assurance
 ├── src/trauma_desert/    # Core utilities
 ├── outputs/
 │   ├── figures/          # Static PNG/PDF charts
 │   ├── interactive/      # HTML maps
+│   ├── presentation/     # Executive dashboard and infographics
+│   ├── fact_sheets/      # Neighborhood-specific summaries
 │   └── tables/           # CSV results
 ├── docs/                 # Documentation
-│   ├── data_dictionary.md
-│   └── methodology.md
 └── configs/params.yml    # Analysis parameters
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -120,7 +123,7 @@ make validate   # Quality checks
 
 ---
 
-## 📈 Data Sources
+## Data Sources
 
 | Dataset | Source | Records |
 |---------|--------|---------|
@@ -132,26 +135,39 @@ make validate   # Quality checks
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 ### Analysis Pipeline
 1. **Data Collection**: Download shooting data, geocode trauma centers, fetch census boundaries
 2. **Spatial Join**: Assign each shooting to its containing census tract
 3. **Density Calculation**: Annual shootings per square mile per tract
 4. **Transport Time**: Drive-time isochrones from Level I trauma centers
-5. **Bivariate Classification**: Tercile-based 3×3 matrix
+5. **Bivariate Classification**: Tercile-based 3x3 matrix
 6. **Statistical Analysis**: Disparity tests, golden hour coverage, temporal trends
+7. **Extended Analysis**: Oaxaca-Blinder decomposition, scenario modeling, vulnerability indices
 
 ### Key Metrics
 - **Shooting Density**: `(total_shootings / years) / tract_area_sq_mi`
 - **Transport Time**: Minutes to nearest Level I trauma center (driving)
 - **Golden Hour**: Percentage of shootings within 20 minutes of definitive care
+- **Vulnerability Index**: Composite of poverty, income, violence, and access metrics
 
 See [docs/methodology.md](docs/methodology.md) for complete details.
 
 ---
 
-## 📊 Key Results
+## Key Results
+
+### Hospital Burden Distribution
+
+| Hospital | Shootings | % of City |
+|----------|-----------|-----------|
+| Temple University Hospital | 9,544 | **54.9%** |
+| Penn Presbyterian | 4,677 | 26.9% |
+| Jefferson Einstein | 2,262 | 13.0% |
+| Thomas Jefferson | 897 | 5.2% |
+
+Temple University Hospital handles more than half of all gun violence victims in Philadelphia.
 
 ### Demographic Disparities
 
@@ -159,7 +175,13 @@ See [docs/methodology.md](docs/methodology.md) for complete details.
 |--------|----------------|--------------|---------|
 | % Black | 76.0% | 38.3% | <0.0001 |
 | % Poverty | 30.8% | 21.8% | 0.009 |
-| Shooting Rate | 2.26x higher | baseline | - |
+| Shooting Rate | 4.4x higher | baseline | - |
+
+### Oaxaca-Blinder Decomposition
+
+The racial disparity in shooting density was decomposed:
+- **31.5% Explained** by differences in poverty and income
+- **68.5% Unexplained** - attributable to structural/historical factors
 
 ### Golden Hour Coverage
 
@@ -170,13 +192,28 @@ See [docs/methodology.md](docs/methodology.md) for complete details.
 | 20+ min | 62 | 0.4% |
 
 ### Temporal Trends
-- **Peak Year**: 2021 (2,338 shootings)
-- **2015→2025 Trend**: -27.4% (declining)
-- **Summer/Winter Ratio**: 1.41x more in summer
+- **Peak Year**: 2021 (2,338 shootings - COVID-era spike)
+- **2015 to 2025 Trend**: -27.4% (declining after peak)
+- **Summer/Winter Ratio**: 1.41x more shootings in summer months
 
 ---
 
-## 🛠️ Configuration
+## Extended Analyses
+
+This project includes several advanced analyses:
+
+1. **Time-of-Day Sensitivity**: How rush hour affects trauma access
+2. **Scenario Modeling**: Optimal locations for new trauma facilities
+3. **Flow Lines Visualization**: Patient routing to nearest trauma centers
+4. **Temporal Animation**: Year-by-year shooting hotspot migration
+5. **Social Determinants Index**: Compound disadvantage scoring
+6. **Oaxaca-Blinder Decomposition**: Quantifying unexplained disparity
+7. **Stop the Bleed Prioritization**: Optimal training deployment locations
+8. **Neighborhood Fact Sheets**: One-page summaries for advocacy
+
+---
+
+## Configuration
 
 Edit `configs/params.yml` to customize:
 
@@ -200,7 +237,7 @@ analysis:
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you use this analysis in your research, please cite:
 
@@ -215,24 +252,25 @@ If you use this analysis in your research, please cite:
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 1. **Transport times** use tract centroids; actual times vary within tracts
 2. **Isochrones** assume average traffic; not real-time conditions
 3. **Census data** from 2018-2022 may not reflect current demographics
-4. **Tercile thresholds** are arbitrary; different cutoffs yield different results
+4. **Tercile thresholds** are methodological choices; different cutoffs yield different results
+5. **Oaxaca-Blinder decomposition** limited to available socioeconomic variables
 
-See [docs/methodology.md](docs/methodology.md) for complete limitations.
+See [docs/methodology.md](docs/methodology.md) for complete limitations discussion.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **OpenDataPhilly** for shooting incident data
 - **Pennsylvania Trauma Systems Foundation** for trauma center information
@@ -241,4 +279,4 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 ---
 
-*Last updated: December 2025*
+*Analysis completed January 2025*
