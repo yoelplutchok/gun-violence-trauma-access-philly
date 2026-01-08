@@ -176,7 +176,7 @@ Temple University Hospital is the nearest Level I trauma center for more than ha
 | Metric | Trauma Deserts | Other Tracts | p-value |
 |--------|----------------|--------------|---------|
 | % Black | 76.0% | 38.3% | <0.0001 |
-| % Poverty | 30.8% | 21.8% | 0.009 |
+| % Poverty | 30.8% | 21.8% | <0.001 |
 | Shooting Rate | 4.4x higher | baseline | - |
 
 ### Oaxaca-Blinder Decomposition

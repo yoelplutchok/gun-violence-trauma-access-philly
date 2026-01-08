@@ -206,7 +206,7 @@ def create_isochrone_map() -> Path:
                 </div>
             </div>
             <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #444; font-size: 11px;">
-                <div>🏥 Level I Adult Trauma</div>
+                <div>🏥 Level I Trauma</div>
                 <div>🏨 Level II Trauma</div>
             </div>
         </div>

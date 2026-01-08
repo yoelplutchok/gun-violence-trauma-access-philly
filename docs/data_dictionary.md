@@ -17,7 +17,7 @@ This document describes all data files, their sources, and field definitions.
 |-------|------|-------------|
 | objectid | int | Unique incident identifier |
 | year | int | Year of incident |
-| date | date | Date of incident |
+| date_ | date | Date of incident (note trailing underscore) |
 | time | time | Time of incident |
 | race | str | Victim race (B=Black, W=White, A=Asian, H=Hispanic, etc.) |
 | sex | str | Victim sex (M/F) |
@@ -36,7 +36,7 @@ This document describes all data files, their sources, and field definitions.
 
 ### `trauma_centers_YYYY-MM-DD.csv`
 **Source:** Pennsylvania Trauma Systems Foundation  
-**URL:** https://www.ptsf.org/accreditation/trauma-center-list/  
+**URL:** https://www.ptsf.org/trauma-center/  
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -85,16 +85,27 @@ Cleaned and validated shooting incidents.
 | Field | Type | Description |
 |-------|------|-------------|
 | objectid | int | Unique incident identifier |
-| date | datetime | Incident date |
-| year | int | Incident year |
+| dc_key | str | DC key identifier |
 | lat | float | Validated latitude |
 | lng | float | Validated longitude |
-| race | str | Standardized race (Black, White, Asian, Hispanic, Unknown) |
-| sex | str | Sex (Male, Female, Unknown) |
+| location | str | Location description |
+| dist | str | Police district |
+| date | datetime | Incident date |
+| year | int | Incident year |
+| month | int | Incident month |
+| day_of_week | int | Day of week (0=Monday) |
+| day_name | str | Day name |
+| hour | int | Hour of incident |
+| race | str | Standardized race (B=Black, W=White, etc.) |
+| is_male | bool | True if victim is male |
 | age | int | Age (null if invalid) |
-| age_group | str | Age category (<18, 18-24, 25-34, 35-44, 45-54, 55+) |
+| age_group | str | Age category |
+| wound | str | Wound location |
 | is_fatal | bool | True if shooting was fatal |
+| is_outside | bool | True if incident occurred outside |
+| is_inside | bool | True if incident occurred inside |
 | is_officer_involved | bool | True if officer-involved |
+| latino | bool | True if victim is Latino/Hispanic |
 
 ### `shootings_with_tracts.csv`
 Shootings with assigned census tract.
