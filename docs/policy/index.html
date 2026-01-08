@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Report: Gun Violence and Trauma Access in Philadelphia</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #c53030;
+            --success: #276749;
+            --warning: #c05621;
+            --text: #1a202c;
+            --text-light: #4a5568;
+            --bg: #ffffff;
+            --bg-alt: #f7fafc;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        .report-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .report-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .report-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .report-header .meta {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        .report-type {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        /* Executive Summary Box */
+        .exec-summary {
+            background: var(--bg-alt);
+            border-left: 5px solid var(--primary);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .exec-summary h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        /* Key Findings Grid */
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .finding-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .finding-card .stat {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .finding-card .label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Section Headers */
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+        
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        td {
+            padding: 0.65rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        tr:nth-child(even) {
+            background: var(--bg-alt);
+        }
+        
+        tr:hover {
+            background: #edf2f7;
+        }
+        
+        /* Highlight Row */
+        tr.highlight {
+            background: #fed7d7 !important;
+            font-weight: 600;
+        }
+        
+        /* Recommendation Boxes */
+        .recommendation {
+            background: white;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--success);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .recommendation h4 {
+            color: var(--success);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .recommendation .target {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+            font-style: italic;
+        }
+        
+        /* Callout Boxes */
+        .callout {
+            background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+            border: 1px solid #90cdf4;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .callout.warning {
+            background: linear-gradient(135deg, #fffaf0 0%, #fef3c7 100%);
+            border-color: #f6ad55;
+        }
+        
+        .callout .big-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Figures */
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #90cdf4;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .report-header {
+                background: var(--primary) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .finding-card, .recommendation, .callout {
+                break-inside: avoid;
+            }
+            
+            body {
+                font-size: 11pt;
+            }
+        }
+        
+        /* Navigation */
+        .toc {
+            background: var(--bg-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .toc li {
+            margin: 0.5rem 0;
+        }
+        
+        .toc a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="report-header">
+        <div class="container">
+            <span class="report-type">Policy Report</span>
+            <h1>Gun Violence and Trauma Access in Philadelphia</h1>
+            <p class="subtitle">Findings and Recommendations for Reducing Preventable Deaths</p>
+            <p class="meta">
+                Prepared by Yoel Y. Plutchok | January 2026
+            </p>
+        </div>
+    </header>
+    
+    <main class="container">
+        
+        <section class="exec-summary">
+            <h2>Executive Summary</h2>
+            <p>
+                This report presents findings from a comprehensive geospatial analysis of gun violence and 
+                trauma care access in Philadelphia. Using 11 years of shooting data (2015-2025) and drive-time 
+                modeling to Level I trauma centers, we identify neighborhoods facing compounded disadvantage 
+                and provide evidence-based recommendations for reducing preventable deaths.
+            </p>
+        </section>
+        
+        <div class="findings-grid">
+            <div class="finding-card">
+                <span class="stat">18</span>
+                <span class="label">"Trauma desert" neighborhoods identified</span>
+            </div>
+            <div class="finding-card">
+                <span class="stat">99.6%</span>
+                <span class="label">of shootings within 20 min of Level I trauma</span>
+            </div>
+            <div class="finding-card">
+                <span class="stat">54.9%</span>
+                <span class="label">of shootings in Temple Hospital's catchment</span>
+            </div>
+            <div class="finding-card">
+                <span class="stat">4.4x</span>
+                <span class="label">higher shooting rate in Black neighborhoods</span>
+            </div>
+        </div>
+        
+        <div class="callout warning">
+            <span class="big-text">The disparity is in VIOLENCE, not ACCESS</span>
+            <p>Black neighborhoods are actually 3.2 minutes CLOSER to trauma centers, yet experience 4.4x higher shooting rates</p>
+        </div>
+        
+        <nav class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#findings">Key Findings</a></li>
+                <li><a href="#priority">Priority Neighborhoods</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#data">Data Sources</a></li>
+            </ul>
+        </nav>
+        
+        <h2 id="problem">The Problem</h2>
+        
+        <p>
+            Philadelphia has experienced a gun violence crisis for decades, with over <strong>17,000 shooting 
+            incidents</strong> between 2015 and 2025. A "trauma desert" is a neighborhood that faces 
+            <strong>two compounding disadvantages</strong>: high gun violence burden AND poor access to trauma care.
+        </p>
+        
+        <table>
+            <tr><th>Metric</th><th>Value</th></tr>
+            <tr><td>Total shooting victims (2015-2025)</td><td>17,383</td></tr>
+            <tr><td>Fatal shootings</td><td>3,588 (20.6%)</td></tr>
+            <tr><td>Peak year (2021)</td><td>2,338 shootings</td></tr>
+            <tr><td>Trauma desert neighborhoods</td><td>18 census tracts</td></tr>
+            <tr><td>Population in trauma deserts</td><td>83,159 residents</td></tr>
+        </table>
+        
+        <h2 id="findings">Key Findings</h2>
+        
+        <h3>Finding 1: Geographic Access is Actually GOOD</h3>
+        
+        <p>Contrary to expectations, Philadelphia has excellent coverage:</p>
+        
+        <table>
+            <tr><th>Distance to Level I Trauma</th><th>% of Shootings</th></tr>
+            <tr><td>Within 10 minutes</td><td>90.5%</td></tr>
+            <tr><td>Within 20 minutes</td><td>99.6%</td></tr>
+            <tr class="highlight"><td>Beyond 20 minutes</td><td>0.4% (62 shootings)</td></tr>
+        </table>
+        
+        <p><strong>Implication:</strong> Building new trauma centers would have limited impact because access is already good for 99.6% of victims.</p>
+        
+        <h3>Finding 2: Transport Time DOES Affect Survival</h3>
+        
+        <table>
+            <tr><th>Transport Time</th><th>Fatality Rate</th></tr>
+            <tr><td>0-5 minutes</td><td>20.0%</td></tr>
+            <tr><td>5-10 minutes</td><td>20.8%</td></tr>
+            <tr><td>10-15 minutes</td><td>21.4%</td></tr>
+            <tr><td>15-20 minutes</td><td>26.5%</td></tr>
+            <tr class="highlight"><td>20+ minutes</td><td>30.6%</td></tr>
+        </table>
+        
+        <p>Each additional minute of transport time increases death odds by <strong>1.5%</strong> (p=0.005).</p>
+        
+        <figure>
+            <img src="../figures/fatality_transport_analysis.png" alt="Fatality rate by transport time">
+            <figcaption>Fatality rate increases with distance from trauma care</figcaption>
+        </figure>
+        
+        <h3>Finding 3: Two Hospitals Bear 82% of the Burden</h3>
+        
+        <table>
+            <tr><th>Hospital</th><th>Shootings in Catchment</th><th>% of City</th></tr>
+            <tr class="highlight"><td>Temple University Hospital</td><td>9,544</td><td>54.9%</td></tr>
+            <tr><td>Penn Presbyterian</td><td>4,677</td><td>26.9%</td></tr>
+            <tr><td>Jefferson Einstein</td><td>2,262</td><td>13.0%</td></tr>
+            <tr><td>Thomas Jefferson</td><td>897</td><td>5.2%</td></tr>
+        </table>
+        
+        <h3>Finding 4: 68.5% of Racial Disparity is Unexplained</h3>
+        
+        <table>
+            <tr><th>Metric</th><th>Black Neighborhoods</th><th>Other Neighborhoods</th></tr>
+            <tr><td>Average transport time</td><td>9.3 min (CLOSER)</td><td>12.4 min</td></tr>
+            <tr class="highlight"><td>Shooting density</td><td>4.4x higher</td><td>baseline</td></tr>
+        </table>
+        
+        <p>Only 31.5% of this disparity is explained by poverty/income differences. The remaining <strong>68.5% reflects structural and historical factors</strong>.</p>
+        
+        <figure>
+            <img src="../figures/bivariate_map.png" alt="Trauma desert map">
+            <figcaption>Trauma deserts (dark teal) concentrated in areas with both high violence and poor access</figcaption>
+        </figure>
+        
+        <h2 id="priority">Priority Neighborhoods for Intervention</h2>
+        
+        <p>Based on composite scoring of violence burden and access barriers:</p>
+        
+        <table>
+            <tr><th>Rank</th><th>Tract</th><th>Shootings</th><th>Transport Time</th></tr>
+            <tr><td>1</td><td>300 (North Philadelphia)</td><td>253</td><td>15 min</td></tr>
+            <tr><td>2</td><td>330 (Far North)</td><td>66</td><td>20 min</td></tr>
+            <tr><td>3</td><td>298 (North Philadelphia)</td><td>84</td><td>15 min</td></tr>
+            <tr><td>4</td><td>178 (North Philadelphia)</td><td>371</td><td>10 min</td></tr>
+            <tr><td>5</td><td>63 (West Philadelphia)</td><td>89</td><td>15 min</td></tr>
+        </table>
+        
+        <p>The <strong>top 20 priority zones</strong> contain 126,586 residents and experienced 2,607 shootings.</p>
+        
+        <h2 id="recommendations">Recommendations</h2>
+        
+        <div class="recommendation">
+            <h4>Recommendation 1: Violence Prevention Investment</h4>
+            <p class="target">Target: City Council, Mayor's Office, Department of Public Health</p>
+            <p>
+                The 18 trauma desert tracts should receive <strong>priority funding</strong> for community 
+                violence intervention programs, youth employment, conflict mediation, and mental health services.
+            </p>
+        </div>
+        
+        <div class="recommendation">
+            <h4>Recommendation 2: Expand Community Hemorrhage Control</h4>
+            <p class="target">Target: Fire Department, Public Health, Community Organizations</p>
+            <p>
+                Deploy "Stop the Bleed" training in priority neighborhoods. Target sites: schools, SEPTA stations, 
+                recreation centers, churches. <strong>Estimated impact: ~7 lives saved annually</strong> in top 20 zones.
+            </p>
+        </div>
+        
+        <div class="recommendation">
+            <h4>Recommendation 3: Hospital Capacity Assurance</h4>
+            <p class="target">Target: Temple University Hospital, Penn Presbyterian, Health System Leadership</p>
+            <p>
+                Ensure hospitals bearing the greatest burden have adequate trauma bay capacity, staffing, 
+                surge capability, and staff wellness support.
+            </p>
+        </div>
+        
+        <div class="recommendation">
+            <h4>Recommendation 4: Data-Driven Resource Allocation</h4>
+            <p class="target">Target: Police, Fire, Managing Director's Office</p>
+            <p>
+                Use geographic analysis to position EMS units, pre-stage resources during high-risk periods, 
+                and monitor emerging hotspots.
+            </p>
+        </div>
+        
+        <div class="recommendation">
+            <h4>Recommendation 5: Address Root Causes</h4>
+            <p class="target">Target: City Council, State Legislature, Federal Partners</p>
+            <p>
+                The 68.5% unexplained disparity points to structural factors. Long-term solutions require 
+                equitable development, housing stability, educational investment, and reparative justice.
+            </p>
+        </div>
+        
+        <h2 id="data">Data Sources and Methods</h2>
+        
+        <ul>
+            <li><strong>Shooting data:</strong> OpenDataPhilly (17,383 incidents, 2015-2025)</li>
+            <li><strong>Trauma centers:</strong> Pennsylvania Trauma Systems Foundation</li>
+            <li><strong>Drive times:</strong> OpenRouteService API isochrone modeling</li>
+            <li><strong>Demographics:</strong> U.S. Census Bureau ACS</li>
+        </ul>
+        
+        <p>Full methodology, interactive maps, and datasets available at:</p>
+        <p style="text-align: center; font-size: 1.1rem;">
+            <strong><a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly">
+                github.com/yoelplutchok/gun-violence-trauma-access-philly
+            </a></strong>
+        </p>
+        
+        <div class="callout">
+            <span class="big-text">The Bottom Line</span>
+            <p>The path forward requires <strong>preventing violence</strong> in affected neighborhoods, 
+            <strong>equipping communities</strong> with hemorrhage control skills, and 
+            <strong>supporting hospitals</strong> that bear the burden.</p>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p><strong>Yoel Y. Plutchok</strong></p>
+            <p>
+                <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly">
+                    View Full Analysis on GitHub
+                </a>
+            </p>
+            <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">
+                This report was prepared using publicly available data. The author has no conflicts of interest.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
