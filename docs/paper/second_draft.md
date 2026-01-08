@@ -298,13 +298,33 @@ The 4.4-fold disparity in shooting density between predominantly Black and other
 
 American College of Surgeons. (2022). Resources for optimal care of the injured patient. Chicago, IL: American College of Surgeons.
 
+Beard, J. H., Ramsay, J., Sims, C. A., Schwab, C. W., Wiebe, D. J., & Reilly, P. M. (2019). Civilian active shooter incidents: An analysis of hospital preparedness. *Journal of Trauma and Acute Care Surgery*, 86(2), 303-311.
+
+Branas, C. C., Jacoby, S., & Andreyeva, E. (2016). Firearm violence as a disease: A call to action. *Annals of Internal Medicine*, 165(9), 665-666.
+
 Brown, J. B., Rosengart, M. R., Forsythe, R. M., Reynolds, B. R., Gestring, M. L., Hallinan, W. M., ... & Sperry, J. L. (2016). Not all prehospital time is equal: Influence of scene time on mortality. *Annals of Surgery*, 264(6), 1000-1007.
 
 Byrne, J. P., Mann, N. C., Dai, M., Mason, S. A., Karanicolas, P., Rizoli, S., & Nathens, A. B. (2019). Association between emergency medical service response time and motor vehicle crash mortality in the United States. *JAMA Surgery*, 154(4), 286-293.
 
+Goldstick, J. E., Cunningham, R. M., & Carter, P. M. (2022). Current causes of death in children and adolescents in the United States. *New England Journal of Medicine*, 386(20), 1955-1956.
+
+Hsia, R. Y., Shen, Y. C., & Kanzaria, H. K. (2020). Trends in geographic access to trauma centers in the United States. *JAMA Network Open*, 3(10), e2016936.
+
+Jacoby, S. F., Dong, B., Gresh, A., & Richmond, T. S. (2018). Risk factors for survival after gunshot wound injury: An ecologic study of neighborhood social determinants. *Journal of Urban Health*, 95(5), 614-623.
+
+Kaufman, E. J., Wiebe, D. J., Xiong, R. A., Morrison, C. N., Seamon, M. J., & Delgado, M. K. (2021). Epidemiologic trends in fatal and nonfatal firearm injuries in the US, 2009-2017. *JAMA Internal Medicine*, 181(2), 237-244.
+
+MacKenzie, E. J., Rivara, F. P., Jurkovich, G. J., Nathens, A. B., Frey, K. P., Egleston, B. L., ... & Scharfstein, D. O. (2006). A national evaluation of the effect of trauma-center care on mortality. *New England Journal of Medicine*, 354(4), 366-378.
+
 Newgard, C. D., Schmicker, R. H., Hedges, J. R., Trickett, J. P., Davis, D. P., Bulger, E. M., ... & Resuscitation Outcomes Consortium Investigators. (2010). Emergency medical services intervals and survival in trauma: Assessment of the "golden hour" in a North American prospective cohort. *Annals of Emergency Medicine*, 55(3), 235-246.
 
+Papachristos, A. V., & Wildeman, C. (2014). Network exposure and homicide victimization in an African American community. *American Journal of Public Health*, 104(1), 143-150.
+
+Schuurman, N., Bell, N., Hameed, S. M., & Simons, R. (2008). A model for identifying and ranking need for trauma center services in a region. *The Journal of Emergency Medicine*, 35(4), 379-387.
+
 Wandling, M., Nathens, A. B., Shapiro, M. B., & Haut, E. R. (2016). Police transport versus ground EMS: A trauma system-level evaluation of prehospital care policies and their effect on clinical outcomes. *Journal of Trauma and Acute Care Surgery*, 81(5), 931-935.
+
+Wintemute, G. J. (2015). The epidemiology of firearm violence in the twenty-first century United States. *Annual Review of Public Health*, 36, 5-19.
 
 ---
 
