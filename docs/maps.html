@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Maps - Philadelphia Trauma Access Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">Philadelphia Trauma Access Study</a>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="findings.html">Findings</a>
+                <a href="maps.html" class="active">Interactive Maps</a>
+                <a href="visualizations.html">Figures</a>
+                <a href="data.html">Data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Interactive Maps</h1>
+            <p class="lead">Explore the geospatial analysis through interactive visualizations</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section>
+            <p>
+                These interactive maps allow you to explore the data in detail. Click on census 
+                tracts to view statistics, toggle layers on and off, and zoom to areas of interest.
+            </p>
+        </section>
+
+        <section>
+            <h2>Available Maps</h2>
+            <div class="map-grid">
+                <div class="map-card">
+                    <img src="bivariate_map.png" alt="Bivariate Choropleth Map preview">
+                    <div class="map-info">
+                        <h3>Bivariate Classification Map</h3>
+                        <p>
+                            3x3 classification combining shooting density and transport time. 
+                            Dark teal indicates trauma deserts (high violence, poor access). 
+                            Click any tract to view detailed statistics including demographics, 
+                            shooting counts, and nearest trauma center.
+                        </p>
+                        <a href="bivariate_choropleth.html" class="btn">Open Interactive Map</a>
+                    </div>
+                </div>
+
+                <div class="map-card">
+                    <img src="temporal_trends.png" alt="Isochrone Coverage Map preview">
+                    <div class="map-info">
+                        <h3>Trauma Center Isochrones</h3>
+                        <p>
+                            Drive-time polygons showing 5, 10, 15, 20, and 30 minute zones from 
+                            each Level I trauma center. Includes shooting incident heatmap overlay 
+                            showing concentration of violence. Toggle layers using the control panel.
+                        </p>
+                        <a href="isochrone_coverage.html" class="btn">Open Interactive Map</a>
+                    </div>
+                </div>
+
+                <div class="map-card">
+                    <img src="bivariate_map.png" alt="Patient Flow Map preview">
+                    <div class="map-info">
+                        <h3>Patient Flow Visualization</h3>
+                        <p>
+                            Lines connecting each census tract to its nearest Level I trauma center.
+                            Line thickness represents shooting volume; color represents transport time.
+                            Visualizes the modeled catchment area for each hospital.
+                        </p>
+                        <a href="patient_flow_map.html" class="btn">Open Interactive Map</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Map Usage Guide</h2>
+            
+            <h3>Navigation</h3>
+            <ul>
+                <li><strong>Zoom:</strong> Use mouse scroll wheel or +/- buttons</li>
+                <li><strong>Pan:</strong> Click and drag to move the map</li>
+                <li><strong>Reset view:</strong> Click the home button to return to default extent</li>
+            </ul>
+            
+            <h3>Interactivity</h3>
+            <ul>
+                <li><strong>Tract information:</strong> Click any census tract to view a popup with detailed statistics</li>
+                <li><strong>Hospital information:</strong> Click trauma center markers for hospital details</li>
+                <li><strong>Layer toggle:</strong> Use the layer control (upper right) to show/hide different data layers</li>
+            </ul>
+            
+            <h3>Legend</h3>
+            <p>
+                The bivariate map uses a 3x3 color scheme:
+            </p>
+            <ul>
+                <li><strong>Light gray:</strong> Low violence, good access (Class 1)</li>
+                <li><strong>Green tones:</strong> High violence, good access (Classes 7-8)</li>
+                <li><strong>Blue tones:</strong> Low violence, poor access (Classes 2-3)</li>
+                <li><strong>Dark teal:</strong> High violence, poor access - Trauma Desert (Class 9)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Yoel Y. Plutchok</strong></p>
+                    <p>
+                        <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                            View Source Code on GitHub
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-citation">
+                    <p>Suggested Citation:</p>
+                    <p class="citation">
+                        Plutchok, Y.Y. (2025). Gun Violence Burden and Trauma System Capacity in Philadelphia: 
+                        A Geospatial Analysis. GitHub Repository. 
+                        https://github.com/yoelplutchok/gun-violence-trauma-access-philly
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data Sources: OpenDataPhilly, Pennsylvania Trauma Systems Foundation, U.S. Census Bureau</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

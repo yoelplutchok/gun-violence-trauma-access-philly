@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sources - Philadelphia Trauma Access Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">Philadelphia Trauma Access Study</a>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="findings.html">Findings</a>
+                <a href="maps.html">Interactive Maps</a>
+                <a href="visualizations.html">Figures</a>
+                <a href="data.html" class="active">Data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Data Sources and Downloads</h1>
+            <p class="lead">Primary data sources and processed datasets</p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <section>
+            <h2>Primary Data Sources</h2>
+            <div class="data-links">
+                <div class="data-link-card">
+                    <h3>Shooting Victim Data</h3>
+                    <p>
+                        Geocoded shooting incidents in Philadelphia, 2015-present. Includes 
+                        victim demographics, injury severity, and outcome information.
+                    </p>
+                    <p><strong>Records:</strong> 17,383 (after cleaning)</p>
+                    <p><strong>Source:</strong> City of Philadelphia</p>
+                    <a href="https://www.opendataphilly.org/datasets/shooting-victims/" target="_blank">
+                        OpenDataPhilly - Shooting Victims
+                    </a>
+                </div>
+
+                <div class="data-link-card">
+                    <h3>Trauma Center Registry</h3>
+                    <p>
+                        Accredited trauma centers in Pennsylvania with designation levels 
+                        and specializations (Adult, Pediatric).
+                    </p>
+                    <p><strong>Level I Adult Centers:</strong> 4</p>
+                    <p><strong>Source:</strong> Pennsylvania Trauma Systems Foundation</p>
+                    <a href="https://www.ptsf.org/accreditation/trauma-center-list/" target="_blank">
+                        PTSF Trauma Center List
+                    </a>
+                </div>
+
+                <div class="data-link-card">
+                    <h3>Census Tract Boundaries</h3>
+                    <p>
+                        Geographic boundaries for all census tracts in Philadelphia County 
+                        (FIPS 42101).
+                    </p>
+                    <p><strong>Tracts:</strong> 408</p>
+                    <p><strong>Source:</strong> U.S. Census Bureau</p>
+                    <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target="_blank">
+                        Census TIGER/Line Files
+                    </a>
+                </div>
+
+                <div class="data-link-card">
+                    <h3>Demographic Data</h3>
+                    <p>
+                        Population, racial composition, income, and poverty statistics 
+                        at the census tract level.
+                    </p>
+                    <p><strong>Survey:</strong> ACS 5-Year Estimates</p>
+                    <p><strong>Source:</strong> U.S. Census Bureau</p>
+                    <a href="https://data.census.gov/" target="_blank">
+                        Census Data Explorer
+                    </a>
+                </div>
+
+                <div class="data-link-card">
+                    <h3>Drive-Time Isochrones</h3>
+                    <p>
+                        Polygons representing areas reachable within specified drive times 
+                        from each trauma center. Generated via API.
+                    </p>
+                    <p><strong>Intervals:</strong> 5, 10, 15, 20, 30 minutes</p>
+                    <p><strong>Source:</strong> OpenRouteService API</p>
+                    <a href="https://openrouteservice.org/" target="_blank">
+                        OpenRouteService
+                    </a>
+                </div>
+
+                <div class="data-link-card">
+                    <h3>Trauma Center Verification</h3>
+                    <p>
+                        Cross-reference for trauma center accreditation and 
+                        verification status.
+                    </p>
+                    <p><strong>Verification:</strong> ACS/COT</p>
+                    <p><strong>Source:</strong> American College of Surgeons</p>
+                    <a href="https://www.facs.org/quality-programs/trauma/verified-centers/" target="_blank">
+                        ACS Verified Trauma Centers
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Processed Datasets</h2>
+            <p>
+                The following processed datasets are available in the 
+                <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                    GitHub repository
+                </a>:
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>File</th>
+                        <th>Description</th>
+                        <th>Format</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>tracts_analysis_ready.geojson</code></td>
+                        <td>Master analysis dataset with all tract-level metrics</td>
+                        <td>GeoJSON</td>
+                    </tr>
+                    <tr>
+                        <td><code>tracts_bivariate_classified.geojson</code></td>
+                        <td>Tracts with 9-class bivariate classification</td>
+                        <td>GeoJSON</td>
+                    </tr>
+                    <tr>
+                        <td><code>shootings_with_tracts.csv</code></td>
+                        <td>Shooting incidents with tract assignment</td>
+                        <td>CSV</td>
+                    </tr>
+                    <tr>
+                        <td><code>trauma_centers_geocoded.csv</code></td>
+                        <td>Trauma center locations with coordinates</td>
+                        <td>CSV</td>
+                    </tr>
+                    <tr>
+                        <td><code>trauma_desert_tracts.csv</code></td>
+                        <td>List of 18 trauma desert tracts with statistics</td>
+                        <td>CSV</td>
+                    </tr>
+                    <tr>
+                        <td><code>hospital_catchment_statistics.csv</code></td>
+                        <td>Modeled catchment for each trauma center</td>
+                        <td>CSV</td>
+                    </tr>
+                    <tr>
+                        <td><code>golden_hour_distribution.csv</code></td>
+                        <td>Shootings by transport time category</td>
+                        <td>CSV</td>
+                    </tr>
+                    <tr>
+                        <td><code>demographic_disparity_analysis.csv</code></td>
+                        <td>Statistical comparison results</td>
+                        <td>CSV</td>
+                    </tr>
+                    <tr>
+                        <td><code>oaxaca_decomposition_results.csv</code></td>
+                        <td>Oaxaca-Blinder decomposition output</td>
+                        <td>CSV</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Data Dictionary</h2>
+            <p>
+                Complete field definitions are documented in the repository:
+            </p>
+            <p>
+                <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly/blob/main/docs/data_dictionary.md" target="_blank">
+                    View Data Dictionary on GitHub
+                </a>
+            </p>
+            
+            <h3>Key Fields in Master Dataset</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>GEOID</code></td>
+                        <td>String</td>
+                        <td>Census tract identifier (11-digit FIPS code)</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_shootings</code></td>
+                        <td>Integer</td>
+                        <td>Total shooting incidents 2015-2025</td>
+                    </tr>
+                    <tr>
+                        <td><code>annual_shootings_per_sq_mi</code></td>
+                        <td>Float</td>
+                        <td>Shootings per square mile per year</td>
+                    </tr>
+                    <tr>
+                        <td><code>time_to_nearest</code></td>
+                        <td>Integer</td>
+                        <td>Minutes to nearest Level I trauma (5, 10, 15, 20, 30)</td>
+                    </tr>
+                    <tr>
+                        <td><code>nearest_trauma_center</code></td>
+                        <td>String</td>
+                        <td>Name of nearest Level I Adult trauma center</td>
+                    </tr>
+                    <tr>
+                        <td><code>bivariate_class</code></td>
+                        <td>Integer</td>
+                        <td>Classification 1-9 (9 = trauma desert)</td>
+                    </tr>
+                    <tr>
+                        <td><code>pct_black</code></td>
+                        <td>Float</td>
+                        <td>Percent Black population (ACS)</td>
+                    </tr>
+                    <tr>
+                        <td><code>pct_poverty</code></td>
+                        <td>Float</td>
+                        <td>Percent below poverty line (ACS)</td>
+                    </tr>
+                    <tr>
+                        <td><code>total_population</code></td>
+                        <td>Integer</td>
+                        <td>Total population (ACS)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Reproducibility</h2>
+            <p>
+                All analysis code is open source and available for review and replication:
+            </p>
+            <p>
+                <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank" class="btn">
+                    View Repository on GitHub
+                </a>
+            </p>
+            
+            <h3>Repository Structure</h3>
+            <pre style="background: var(--color-bg-alt); padding: 1rem; border: 1px solid var(--color-border); overflow-x: auto; font-size: 0.9rem;">
+gun-violence-trauma-access-philly/
+├── data/
+│   ├── raw/           # Original downloaded files
+│   ├── processed/     # Cleaned and transformed data
+│   ├── geo/           # Geographic boundaries
+│   └── isochrones/    # Drive-time polygons
+├── scripts/
+│   ├── collect/       # Data collection scripts
+│   ├── process/       # Data transformation
+│   ├── analyze/       # Statistical analysis
+│   └── visualize/     # Map and chart generation
+├── outputs/
+│   ├── figures/       # Static visualizations
+│   ├── interactive/   # HTML maps
+│   ├── tables/        # Summary statistics
+│   └── presentation/  # Executive materials
+├── docs/              # Documentation and website
+├── Makefile           # Pipeline automation
+└── README.md          # Project overview</pre>
+        </section>
+
+        <section class="content-section">
+            <h2>License</h2>
+            <p>
+                This project is released under the MIT License. You are free to use, modify, 
+                and distribute the code and analysis with attribution.
+            </p>
+            <p>
+                Source data from OpenDataPhilly and the U.S. Census Bureau are public domain. 
+                Trauma center information is derived from publicly available accreditation records.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Yoel Y. Plutchok</strong></p>
+                    <p>
+                        <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                            View Source Code on GitHub
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-citation">
+                    <p>Suggested Citation:</p>
+                    <p class="citation">
+                        Plutchok, Y.Y. (2025). Gun Violence Burden and Trauma System Capacity in Philadelphia: 
+                        A Geospatial Analysis. GitHub Repository. 
+                        https://github.com/yoelplutchok/gun-violence-trauma-access-philly
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data Sources: OpenDataPhilly, Pennsylvania Trauma Systems Foundation, U.S. Census Bureau</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

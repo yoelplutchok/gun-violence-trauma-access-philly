@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findings - Philadelphia Trauma Access Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">Philadelphia Trauma Access Study</a>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="findings.html" class="active">Findings</a>
+                <a href="maps.html">Interactive Maps</a>
+                <a href="visualizations.html">Figures</a>
+                <a href="data.html">Data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Detailed Findings</h1>
+            <p class="lead">Comprehensive results from the trauma access analysis</p>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <section class="content-section">
+            <h2>1. Trauma Desert Identification</h2>
+            <p>
+                Using bivariate classification of shooting density and transport time terciles, 
+                we identified <strong>18 census tracts (4.4% of the city)</strong> as trauma deserts. 
+                These tracts have both high violence burden and extended transport times to Level I 
+                trauma care.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total trauma desert tracts</td>
+                        <td>18 of 408 (4.4%)</td>
+                    </tr>
+                    <tr>
+                        <td>Population in trauma deserts</td>
+                        <td>83,159 residents (5.2% of city)</td>
+                    </tr>
+                    <tr>
+                        <td>Shootings in trauma deserts</td>
+                        <td>1,659 (9.5% of total)</td>
+                    </tr>
+                    <tr>
+                        <td>Average transport time (trauma deserts)</td>
+                        <td>12.5 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Average transport time (other tracts)</td>
+                        <td>11.3 minutes</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <figure class="figure-full">
+                <img src="figures/bivariate_map.png" alt="Bivariate classification map of Philadelphia">
+                <figcaption>
+                    <strong>Figure 1.</strong> Bivariate choropleth showing shooting density 
+                    (vertical axis) versus transport time to Level I trauma (horizontal axis). 
+                    Dark teal indicates trauma deserts (high density, high time).
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>2. Golden Hour Coverage</h2>
+            <p>
+                Despite identifying trauma desert tracts, Philadelphia's overall geographic access 
+                to Level I trauma care is excellent. <strong>99.6% of all shootings occurred within 
+                20 minutes of a Level I trauma center.</strong>
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transport Time</th>
+                        <th>Shootings</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0-5 minutes</td>
+                        <td>6,319</td>
+                        <td>36.4%</td>
+                    </tr>
+                    <tr>
+                        <td>5-10 minutes</td>
+                        <td>9,405</td>
+                        <td>54.1%</td>
+                    </tr>
+                    <tr>
+                        <td>10-15 minutes</td>
+                        <td>1,334</td>
+                        <td>7.7%</td>
+                    </tr>
+                    <tr>
+                        <td>15-20 minutes</td>
+                        <td>260</td>
+                        <td>1.5%</td>
+                    </tr>
+                    <tr>
+                        <td>20+ minutes</td>
+                        <td>62</td>
+                        <td>0.4%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>
+                This finding suggests that the "trauma desert" phenomenon in Philadelphia is driven 
+                primarily by <strong>violence concentration</strong>, not by poor geographic access 
+                to trauma care.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>3. Demographic Disparities</h2>
+            <p>
+                Trauma deserts are disproportionately located in predominantly Black and 
+                high-poverty neighborhoods.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Trauma Deserts</th>
+                        <th>Other Tracts</th>
+                        <th>p-value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mean % Black</td>
+                        <td>76.0%</td>
+                        <td>38.3%</td>
+                        <td>&lt;0.0001</td>
+                    </tr>
+                    <tr>
+                        <td>Mean % Poverty</td>
+                        <td>30.8%</td>
+                        <td>21.8%</td>
+                        <td>0.0009</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>
+                However, <strong>a counterintuitive finding emerges</strong>: predominantly Black 
+                neighborhoods are actually <em>closer</em> to Level I trauma centers on average. 
+                The correlation between percent Black and transport time is negative (r = -0.25, p &lt; 0.0001).
+            </p>
+            
+            <figure class="figure-full">
+                <img src="figures/summary_charts.png" alt="Summary charts of key findings">
+                <figcaption>
+                    <strong>Figure 2.</strong> Summary visualizations showing demographic 
+                    patterns and temporal trends in shooting incidents.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>4. Oaxaca-Blinder Decomposition</h2>
+            <p>
+                To rigorously quantify the racial disparity, we applied Oaxaca-Blinder decomposition 
+                to separate the gap between predominantly Black tracts and other tracts.
+            </p>
+            
+            <h3>Shooting Density Gap</h3>
+            <p>
+                Predominantly Black tracts experience <strong>4.4x higher shooting density</strong> 
+                (geometric mean ratio). The decomposition reveals:
+            </p>
+            <ul>
+                <li><strong>31.5% Explained:</strong> Attributable to differences in poverty rates and median income</li>
+                <li><strong>68.5% Unexplained:</strong> Residual gap that cannot be attributed to observable socioeconomic characteristics</li>
+            </ul>
+            <p>
+                The large unexplained portion suggests structural and historical factors beyond 
+                current socioeconomic conditions contribute to the concentration of violence.
+            </p>
+            
+            <h3>Transport Time Gap</h3>
+            <p>
+                Black tracts are <strong>3.2 minutes closer</strong> to Level I trauma centers 
+                on average. This finding confirms that the disparity in trauma burden is not 
+                compounded by geographic access barriers.
+            </p>
+            
+            <figure class="figure-full">
+                <img src="figures/oaxaca_decomposition.png" alt="Oaxaca-Blinder decomposition results">
+                <figcaption>
+                    <strong>Figure 3.</strong> Oaxaca-Blinder decomposition showing the 
+                    explained and unexplained portions of the shooting density gap between 
+                    predominantly Black and other tracts.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>5. Hospital Burden Distribution</h2>
+            <p>
+                Using nearest-center assignment based on isochrone containment, we modeled which 
+                Level I trauma center would serve each census tract.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hospital</th>
+                        <th>Tracts Served</th>
+                        <th>Shootings in Catchment</th>
+                        <th>% of City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Temple University Hospital</td>
+                        <td>168</td>
+                        <td>9,544</td>
+                        <td>54.9%</td>
+                    </tr>
+                    <tr>
+                        <td>Penn Presbyterian Medical Center</td>
+                        <td>95</td>
+                        <td>4,677</td>
+                        <td>26.9%</td>
+                    </tr>
+                    <tr>
+                        <td>Jefferson Einstein Philadelphia Hospital</td>
+                        <td>83</td>
+                        <td>2,262</td>
+                        <td>13.0%</td>
+                    </tr>
+                    <tr>
+                        <td>Thomas Jefferson University Hospital</td>
+                        <td>62</td>
+                        <td>897</td>
+                        <td>5.2%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>
+                <strong>Note:</strong> These figures represent modeled catchment based on 
+                nearest-center assignment, not actual patient destination data.
+            </p>
+            
+            <figure class="figure-full">
+                <img src="figures/patient_flow_map.png" alt="Patient flow map">
+                <figcaption>
+                    <strong>Figure 4.</strong> Modeled patient flow from census tract centroids 
+                    to nearest Level I trauma center. Line thickness proportional to shooting count.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>6. Temporal Patterns</h2>
+            <p>
+                Shooting incidents exhibited substantial temporal variation over the study period, 
+                with a pronounced spike during 2020-2021.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Annual Average</th>
+                        <th>Change from Baseline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2015-2019 (Pre-COVID baseline)</td>
+                        <td>1,361</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>2020-2021 (Pandemic peak)</td>
+                        <td>2,297</td>
+                        <td>+68.8%</td>
+                    </tr>
+                    <tr>
+                        <td>2022-2025 (Post-peak)</td>
+                        <td>1,495</td>
+                        <td>+9.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>
+                Peak year was 2021 with 2,338 shootings. Violence has since declined but remains 
+                elevated compared to pre-pandemic levels.
+            </p>
+            
+            <figure class="figure-full">
+                <img src="figures/temporal_trends.png" alt="Temporal trends in shootings">
+                <figcaption>
+                    <strong>Figure 5.</strong> Annual shooting counts and trends, 2015-2025. 
+                    The COVID-era spike (2020-2021) is clearly visible.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>7. Vulnerability Index</h2>
+            <p>
+                We constructed a Neighborhood Vulnerability Index (NVI) combining poverty rate, 
+                household income, shooting density, and transport time. The index examines whether 
+                trauma deserts coincide with other forms of structural disadvantage.
+            </p>
+            <ul>
+                <li>City average vulnerability score: 16.5</li>
+                <li>Trauma desert average: 21.6 (1.31x higher)</li>
+                <li>9 of 18 trauma deserts (50%) are in the top quartile of vulnerability</li>
+            </ul>
+            
+            <figure class="figure-full">
+                <img src="figures/vulnerability_index_map.png" alt="Vulnerability index map">
+                <figcaption>
+                    <strong>Figure 6.</strong> Neighborhood Vulnerability Index showing 
+                    compound disadvantage across Philadelphia census tracts.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>8. Policy Implications</h2>
+            
+            <h3>Stop the Bleed Training Prioritization</h3>
+            <p>
+                We identified 20 priority zones for community hemorrhage control training based 
+                on a composite score of shooting density and transport time. The top 20 zones 
+                contain 126,586 residents and experienced 2,607 shootings over the study period.
+            </p>
+            <p>
+                Conservative estimates suggest community-based hemorrhage control training in 
+                these zones could potentially save approximately 7 lives annually.
+            </p>
+            
+            <h3>Scenario Modeling</h3>
+            <p>
+                Hypothetical placement of new trauma facilities was modeled at 8 candidate locations. 
+                Key findings (using approximate distance-based travel time estimates):
+            </p>
+            <ul>
+                <li><strong>Hunting Park:</strong> Highest overall impact score (would improve access for 198,932 residents)</li>
+                <li><strong>Kingsessing/Cobbs Creek:</strong> Would help the most trauma desert tracts (8 of 18)</li>
+                <li><strong>Frankford/Mayfair:</strong> Would reach the largest population (323,391)</li>
+            </ul>
+            
+            <figure class="figure-full">
+                <img src="figures/stop_the_bleed_priority_map.png" alt="Stop the Bleed priority zones">
+                <figcaption>
+                    <strong>Figure 7.</strong> Priority zones for Stop the Bleed hemorrhage 
+                    control training, ranked by composite violence burden and transport time score.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Yoel Y. Plutchok</strong></p>
+                    <p>
+                        <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                            View Source Code on GitHub
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-citation">
+                    <p>Suggested Citation:</p>
+                    <p class="citation">
+                        Plutchok, Y.Y. (2025). Gun Violence Burden and Trauma System Capacity in Philadelphia: 
+                        A Geospatial Analysis. GitHub Repository. 
+                        https://github.com/yoelplutchok/gun-violence-trauma-access-philly
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data Sources: OpenDataPhilly, Pennsylvania Trauma Systems Foundation, U.S. Census Bureau</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

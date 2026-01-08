@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figures - Philadelphia Trauma Access Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">Philadelphia Trauma Access Study</a>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="methodology.html">Methodology</a>
+                <a href="findings.html">Findings</a>
+                <a href="maps.html">Interactive Maps</a>
+                <a href="visualizations.html" class="active">Figures</a>
+                <a href="data.html">Data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Static Figures and Visualizations</h1>
+            <p class="lead">Publication-quality graphics from the analysis</p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <section>
+            <h2>Executive Summary</h2>
+            <figure class="figure-full">
+                <img src="figures/executive_dashboard.png" alt="Executive Dashboard">
+                <figcaption>
+                    <strong>Executive Dashboard.</strong> Comprehensive overview of key findings 
+                    including bivariate classification, hospital burden distribution, temporal trends, 
+                    and disparity decomposition.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Core Analysis Maps</h2>
+            <div class="figure-grid">
+                <figure class="figure-card">
+                    <img src="figures/bivariate_map.png" alt="Bivariate classification map">
+                    <figcaption>
+                        <strong>Bivariate Classification.</strong> 3x3 matrix combining 
+                        shooting density and transport time terciles.
+                    </figcaption>
+                </figure>
+                
+                <figure class="figure-card">
+                    <img src="figures/presentation_map.png" alt="Presentation map">
+                    <figcaption>
+                        <strong>Presentation Map.</strong> High-resolution version with 
+                        trauma center labels and legend.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/patient_flow_map.png" alt="Patient flow map">
+                    <figcaption>
+                        <strong>Patient Flow.</strong> Lines showing modeled flow from 
+                        tract centroids to nearest trauma center.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/vulnerability_index_map.png" alt="Vulnerability index map">
+                    <figcaption>
+                        <strong>Vulnerability Index.</strong> Neighborhood vulnerability 
+                        combining poverty, income, violence, and access.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Temporal Analysis</h2>
+            <div class="figure-grid">
+                <figure class="figure-card">
+                    <img src="figures/temporal_trends.png" alt="Temporal trends">
+                    <figcaption>
+                        <strong>Annual Trends.</strong> Shooting counts by year with 
+                        COVID-era spike highlighted.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/shooting_annual_summary.png" alt="Annual summary">
+                    <figcaption>
+                        <strong>Annual Summary.</strong> Bar chart of yearly totals 
+                        with trend line.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/shooting_small_multiples.png" alt="Small multiples by year">
+                    <figcaption>
+                        <strong>Year-by-Year Maps.</strong> Small multiples showing 
+                        spatial distribution changes over time.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/shooting_trend_map.png" alt="Trend map">
+                    <figcaption>
+                        <strong>Tract Trends.</strong> Red/yellow/green showing 
+                        increasing/stable/decreasing tracts.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <figure class="figure-full" style="margin-top: 2rem;">
+                <img src="figures/shooting_animation.gif" alt="Animated shooting trends">
+                <figcaption>
+                    <strong>Animated Visualization.</strong> Year-by-year animation showing 
+                    the evolution of shooting hotspots from 2015-2025.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Disparity Analysis</h2>
+            <div class="figure-grid">
+                <figure class="figure-card">
+                    <img src="figures/oaxaca_decomposition.png" alt="Oaxaca-Blinder decomposition">
+                    <figcaption>
+                        <strong>Oaxaca-Blinder Decomposition.</strong> Explained vs. 
+                        unexplained portions of the racial disparity in shooting density.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/oaxaca_predictor_contributions.png" alt="Predictor contributions">
+                    <figcaption>
+                        <strong>Predictor Contributions.</strong> Breakdown of how each 
+                        variable contributes to the explained portion.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/summary_charts.png" alt="Summary charts">
+                    <figcaption>
+                        <strong>Summary Statistics.</strong> Multi-panel summary of 
+                        key demographic and temporal findings.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/vulnerability_correlations.png" alt="Vulnerability correlations">
+                    <figcaption>
+                        <strong>Correlation Analysis.</strong> Relationships between 
+                        vulnerability index and demographic characteristics.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sensitivity Analysis</h2>
+            <div class="figure-grid">
+                <figure class="figure-card">
+                    <img src="figures/time_of_day_sensitivity.png" alt="Time of day sensitivity">
+                    <figcaption>
+                        <strong>Traffic Sensitivity.</strong> Classification stability 
+                        across rush hour vs. off-peak scenarios.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/classification_flip_analysis.png" alt="Classification flip analysis">
+                    <figcaption>
+                        <strong>Classification Changes.</strong> Tracts that change 
+                        classification under different traffic conditions.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Scenario Modeling</h2>
+            <div class="figure-grid">
+                <figure class="figure-card">
+                    <img src="figures/scenario_rankings.png" alt="Scenario rankings">
+                    <figcaption>
+                        <strong>Location Rankings.</strong> Candidate locations for 
+                        new trauma facilities ranked by impact score.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/scenario_map_rank1_Hunting_Park.png" alt="Hunting Park scenario">
+                    <figcaption>
+                        <strong>Hunting Park.</strong> Impact map for top-ranked 
+                        candidate location.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/scenario_map_rank2_Kingsessing_Cobbs_Creek.png" alt="Kingsessing scenario">
+                    <figcaption>
+                        <strong>Kingsessing/Cobbs Creek.</strong> Best location for 
+                        trauma desert reduction.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/scenario_map_rank3_Tioga_Nicetown.png" alt="Tioga Nicetown scenario">
+                    <figcaption>
+                        <strong>Tioga/Nicetown.</strong> Third-ranked candidate 
+                        location for impact.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Policy Outputs</h2>
+            <div class="figure-grid">
+                <figure class="figure-card">
+                    <img src="figures/stop_the_bleed_priority_map.png" alt="Stop the Bleed priority map">
+                    <figcaption>
+                        <strong>Training Priority Zones.</strong> Top 20 zones for 
+                        community hemorrhage control training.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/stop_the_bleed_impact_analysis.png" alt="Stop the Bleed impact">
+                    <figcaption>
+                        <strong>Training Impact.</strong> Cumulative population and 
+                        shooting coverage by number of zones.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure-card">
+                    <img src="figures/key_findings_infographic.png" alt="Key findings infographic">
+                    <figcaption>
+                        <strong>Key Findings.</strong> Single-page infographic 
+                        summarizing principal results.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Yoel Y. Plutchok</strong></p>
+                    <p>
+                        <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                            View Source Code on GitHub
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-citation">
+                    <p>Suggested Citation:</p>
+                    <p class="citation">
+                        Plutchok, Y.Y. (2025). Gun Violence Burden and Trauma System Capacity in Philadelphia: 
+                        A Geospatial Analysis. GitHub Repository. 
+                        https://github.com/yoelplutchok/gun-violence-trauma-access-philly
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data Sources: OpenDataPhilly, Pennsylvania Trauma Systems Foundation, U.S. Census Bureau</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

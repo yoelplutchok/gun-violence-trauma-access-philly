@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - Philadelphia Trauma Access Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">Philadelphia Trauma Access Study</a>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="methodology.html" class="active">Methodology</a>
+                <a href="findings.html">Findings</a>
+                <a href="maps.html">Interactive Maps</a>
+                <a href="visualizations.html">Figures</a>
+                <a href="data.html">Data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Research Methodology</h1>
+            <p class="lead">Technical approach to measuring trauma access disparities</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Research Purpose</h2>
+            <p>
+                This study addresses a fundamental public health question: <strong>Is there a spatial 
+                mismatch between gun violence burden and timely access to Level I trauma care in 
+                Philadelphia?</strong> The "golden hour" principle in trauma care establishes that 
+                survival rates decline significantly when definitive surgical care is delayed beyond 
+                60 minutes post-injury. For penetrating trauma such as gunshot wounds, the first 
+                10-20 minutes are particularly critical for hemorrhage control.
+            </p>
+            <p>
+                We operationalize "trauma desert" status through bivariate classification, identifying 
+                census tracts that simultaneously experience high violence burden and extended transport 
+                times to Level I trauma centers. This approach moves beyond simple proximity analysis 
+                to capture the compounding disadvantage of both exposure and access barriers.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Data Sources</h2>
+            
+            <h3>Shooting Incident Data</h3>
+            <p>
+                Shooting victim data was obtained from OpenDataPhilly, the City of Philadelphia's 
+                open data portal. The dataset includes all reported shooting incidents from January 2015 
+                through December 2025, with geocoded coordinates, victim demographics, and outcome 
+                information. After removing records with invalid coordinates, the analysis includes 
+                17,383 shooting incidents.
+            </p>
+
+            <h3>Trauma Center Locations</h3>
+            <p>
+                Level I and Level II trauma centers were identified from the Pennsylvania Trauma 
+                Systems Foundation (PTSF) accreditation registry and verified against the American 
+                College of Surgeons trauma center verification database. Philadelphia contains four 
+                Level I Adult trauma centers (Temple University Hospital, Penn Presbyterian Medical 
+                Center, Thomas Jefferson University Hospital, and Jefferson Einstein Philadelphia Hospital), 
+                two Level I Pediatric centers, and one Level II Adult center.
+            </p>
+
+            <h3>Drive-Time Isochrones</h3>
+            <p>
+                Travel time polygons were generated using the OpenRouteService API with driving-car 
+                profile. For each Level I Adult trauma center, isochrones were computed at 5, 10, 15, 
+                20, and 30 minute intervals. These represent the geographic area reachable within each 
+                time threshold under typical traffic conditions.
+            </p>
+
+            <h3>Census Geography and Demographics</h3>
+            <p>
+                Census tract boundaries were obtained from the U.S. Census Bureau TIGER/Line files. 
+                Demographic data including population, racial composition, and poverty rates were 
+                obtained from the American Community Survey 5-year estimates. Philadelphia County 
+                contains 408 census tracts.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Analytical Methods</h2>
+
+            <h3>Spatial Assignment</h3>
+            <p>
+                Each shooting incident was assigned to a census tract using point-in-polygon spatial 
+                join. Tract centroids were computed and used to determine transport time categories 
+                based on isochrone containment. Transport time to the nearest Level I Adult trauma 
+                center was categorized into discrete intervals (0-5, 5-10, 10-15, 15-20, 20-30, 30+ minutes).
+            </p>
+
+            <h3>Shooting Density Calculation</h3>
+            <p>
+                For each tract, shooting density was calculated as the total number of shootings 
+                divided by tract area (in square miles) divided by the number of years in the study 
+                period (11 years). This produces a standardized rate of shootings per square mile 
+                per year, enabling comparison across tracts of varying size.
+            </p>
+
+            <h3>Bivariate Classification</h3>
+            <p>
+                Tracts were classified using a 3x3 bivariate matrix combining shooting density terciles 
+                and transport time terciles. Tercile thresholds were computed using all 408 tracts:
+            </p>
+            <ul>
+                <li><strong>Shooting Density:</strong> Low (bottom third), Medium (middle third), High (top third)</li>
+                <li><strong>Transport Time:</strong> Low/Good (bottom third), Medium (middle third), High/Poor (top third)</li>
+            </ul>
+            <p>
+                The resulting 9-class system identifies "trauma deserts" as Class 9 tracts with both 
+                high shooting density AND high transport time.
+            </p>
+
+            <h3>Statistical Testing</h3>
+            <p>
+                Demographic comparisons between trauma desert and non-trauma desert tracts were 
+                conducted using Welch's t-test (unequal variance). Correlations between variables 
+                were assessed using Pearson's r. All tests used alpha = 0.05 for significance.
+            </p>
+
+            <h3>Oaxaca-Blinder Decomposition</h3>
+            <p>
+                To quantify the racial disparity in violence burden, we applied Oaxaca-Blinder 
+                decomposition separating tracts into predominantly Black (50%+ Black population, n=143) 
+                and other tracts (n=246). The decomposition separates the gap into:
+            </p>
+            <ul>
+                <li><strong>Explained portion:</strong> Attributable to differences in observed characteristics (poverty rate, median income)</li>
+                <li><strong>Unexplained portion:</strong> Residual gap not explained by observable factors</li>
+            </ul>
+            <p>
+                Shooting density was log-transformed (log1p) for the decomposition to address 
+                skewness. The reported ratio (4.4x) represents the geometric mean ratio 
+                exp(mean log density difference).
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Limitations</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Limitation</th>
+                        <th>Description</th>
+                        <th>Mitigation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Transport time approximation</td>
+                        <td>Isochrones assume typical traffic conditions; actual transport varies by time of day</td>
+                        <td>Sensitivity analysis showed classification stable across rush hour scenarios</td>
+                    </tr>
+                    <tr>
+                        <td>Centroid assumption</td>
+                        <td>Using tract centroids ignores within-tract variation in access</td>
+                        <td>Most tracts are small enough that centroid is representative</td>
+                    </tr>
+                    <tr>
+                        <td>Hospital catchment modeling</td>
+                        <td>Nearest-hospital assignment does not reflect actual EMS destination decisions</td>
+                        <td>Clearly labeled as "modeled catchment" throughout</td>
+                    </tr>
+                    <tr>
+                        <td>No prehospital data</td>
+                        <td>Analysis does not include EMS response times or scene times</td>
+                        <td>Focus is on transport time component only</td>
+                    </tr>
+                    <tr>
+                        <td>Discrete time buckets</td>
+                        <td>5-minute intervals create artificial boundaries</td>
+                        <td>Tercile classification reduces sensitivity to exact cutoffs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Reproducibility</h2>
+            <p>
+                All analysis code is available in the 
+                <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                    GitHub repository
+                </a>. The analysis pipeline can be reproduced using the provided Makefile:
+            </p>
+            <pre style="background: var(--color-bg-alt); padding: 1rem; border: 1px solid var(--color-border); overflow-x: auto;">
+make setup      # Install dependencies
+make collect    # Download raw data
+make isochrones # Generate drive-time polygons (requires API key)
+make process    # Clean and transform data
+make analyze    # Run statistical analysis
+make visualize  # Generate maps and figures
+make test       # Validation checks</pre>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Yoel Y. Plutchok</strong></p>
+                    <p>
+                        <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly" target="_blank">
+                            View Source Code on GitHub
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-citation">
+                    <p>Suggested Citation:</p>
+                    <p class="citation">
+                        Plutchok, Y.Y. (2025). Gun Violence Burden and Trauma System Capacity in Philadelphia: 
+                        A Geospatial Analysis. GitHub Repository. 
+                        https://github.com/yoelplutchok/gun-violence-trauma-access-philly
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data Sources: OpenDataPhilly, Pennsylvania Trauma Systems Foundation, U.S. Census Bureau</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
