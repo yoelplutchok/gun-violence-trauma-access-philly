@@ -81,7 +81,104 @@
         </section>
 
         <section class="content-section">
-            <h2>2. Golden Hour Coverage</h2>
+            <h2>2. Fatality-Transport Time Relationship</h2>
+            <p>
+                A critical question is whether transport time to trauma care actually affects mortality. 
+                Using the fatality status recorded in the shooting data, we tested the association between 
+                modeled transport time and fatality outcomes.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transport Time</th>
+                        <th>Fatal</th>
+                        <th>Total</th>
+                        <th>Fatality Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0-5 minutes</td>
+                        <td>1,263</td>
+                        <td>6,319</td>
+                        <td>20.0%</td>
+                    </tr>
+                    <tr>
+                        <td>5-10 minutes</td>
+                        <td>1,952</td>
+                        <td>9,405</td>
+                        <td>20.8%</td>
+                    </tr>
+                    <tr>
+                        <td>10-15 minutes</td>
+                        <td>285</td>
+                        <td>1,334</td>
+                        <td>21.4%</td>
+                    </tr>
+                    <tr>
+                        <td>15-20 minutes</td>
+                        <td>69</td>
+                        <td>260</td>
+                        <td>26.5%</td>
+                    </tr>
+                    <tr>
+                        <td>20+ minutes</td>
+                        <td>19</td>
+                        <td>62</td>
+                        <td style="font-weight: bold;">30.6%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Statistical Analysis</h3>
+            <ul>
+                <li><strong>Chi-square test:</strong> X<sup>2</sup> = 11.46, df = 4, p = 0.022</li>
+                <li><strong>Logistic regression:</strong> Odds Ratio = 1.015 per minute (95% CI: 1.005-1.025, p = 0.005)</li>
+                <li><strong>Interpretation:</strong> Each additional minute of transport time is associated with 
+                    1.5% higher odds of fatality</li>
+            </ul>
+            
+            <p>
+                Fatality rate increases from <strong>20.0% at 0-5 minutes to 30.6% at 20+ minutes</strong>, 
+                a difference of 10.7 percentage points. This finding provides empirical support within 
+                our dataset for the relationship between transport time and mortality outcomes.
+            </p>
+            
+            <h3>Consistency with Published Literature</h3>
+            <p>
+                These findings align with established trauma research:
+            </p>
+            <ul>
+                <li>Newgard et al. (2010): For patients with physiologic compromise, transport times 
+                    beyond 45 minutes were associated with increased mortality (Annals of Emergency Medicine)</li>
+                <li>Byrne et al. (2019): Shorter pre-hospital times for penetrating trauma were associated 
+                    with improved outcomes (Journal of Trauma and Acute Care Surgery)</li>
+                <li>Wandling et al. (2016): Access to Level I trauma centers within 60 minutes reduces 
+                    mortality for severely injured patients (JAMA Surgery)</li>
+                <li>Brown et al. (2016): Patients transported to Level I trauma centers had significantly 
+                    lower mortality than those taken to non-trauma centers (Annals of Surgery)</li>
+            </ul>
+            
+            <p class="note">
+                <strong>Limitations:</strong> Fatality status in shooting data reflects ultimate outcome, 
+                not specifically hospital outcome. Some fatalities may have occurred at the scene before 
+                transport was possible. Transport time is modeled from tract centroid, not actual 
+                incident location. We cannot control for injury severity beyond wound location.
+            </p>
+            
+            <figure class="figure-full">
+                <img src="figures/fatality_transport_analysis.png" alt="Fatality rate by transport time">
+                <figcaption>
+                    <strong>Figure 2.</strong> Shooting fatality rate by transport time category to 
+                    nearest Level I trauma center. Fatality rate increases monotonically with 
+                    increasing transport time (p = 0.005).
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>3. Geographic Coverage (Golden Hour)</h2>
             <p>
                 Despite identifying trauma desert tracts, Philadelphia's overall geographic access 
                 to Level I trauma care is excellent. <strong>99.6% of shootings with tract assignment 
@@ -133,7 +230,7 @@
         </section>
 
         <section class="content-section">
-            <h2>3. Demographic Disparities</h2>
+            <h2>4. Demographic Disparities</h2>
             <p>
                 Trauma deserts are disproportionately located in predominantly Black and 
                 high-poverty neighborhoods.
@@ -173,14 +270,14 @@
             <figure class="figure-full">
                 <img src="figures/summary_charts.png" alt="Summary charts of key findings">
                 <figcaption>
-                    <strong>Figure 2.</strong> Summary visualizations showing demographic 
+                    <strong>Figure 3.</strong> Summary visualizations showing demographic 
                     patterns and temporal trends in shooting incidents.
                 </figcaption>
             </figure>
         </section>
 
         <section class="content-section">
-            <h2>4. Oaxaca-Blinder Decomposition</h2>
+            <h2>5. Oaxaca-Blinder Decomposition</h2>
             <p>
                 To rigorously quantify the racial disparity, we applied Oaxaca-Blinder decomposition 
                 to separate the gap between predominantly Black tracts and other tracts.
@@ -210,7 +307,7 @@
             <figure class="figure-full">
                 <img src="figures/oaxaca_decomposition.png" alt="Oaxaca-Blinder decomposition results">
                 <figcaption>
-                    <strong>Figure 3.</strong> Oaxaca-Blinder decomposition showing the 
+                    <strong>Figure 4.</strong> Oaxaca-Blinder decomposition showing the 
                     explained and unexplained portions of the shooting density gap between 
                     predominantly Black and other tracts.
                 </figcaption>
@@ -218,7 +315,7 @@
         </section>
 
         <section class="content-section">
-            <h2>5. Hospital Burden Distribution</h2>
+            <h2>6. Hospital Burden Distribution</h2>
             <p>
                 Using nearest-center assignment based on isochrone containment, we modeled which 
                 Level I trauma center would serve each census tract.
@@ -269,14 +366,14 @@
             <figure class="figure-full">
                 <img src="figures/patient_flow_map.png" alt="Patient flow map">
                 <figcaption>
-                    <strong>Figure 4.</strong> Modeled patient flow from census tract centroids 
+                    <strong>Figure 5.</strong> Modeled patient flow from census tract centroids 
                     to nearest Level I trauma center. Line thickness proportional to shooting count.
                 </figcaption>
             </figure>
         </section>
 
         <section class="content-section">
-            <h2>6. Temporal Patterns</h2>
+            <h2>7. Temporal Patterns</h2>
             <p>
                 Shooting incidents exhibited substantial temporal variation over the study period, 
                 with a pronounced spike during 2020-2021.
@@ -317,14 +414,14 @@
             <figure class="figure-full">
                 <img src="figures/temporal_trends.png" alt="Temporal trends in shootings">
                 <figcaption>
-                    <strong>Figure 5.</strong> Annual shooting counts and trends, 2015-2025. 
+                    <strong>Figure 6.</strong> Annual shooting counts and trends, 2015-2025. 
                     The COVID-era spike (2020-2021) is clearly visible.
                 </figcaption>
             </figure>
         </section>
 
         <section class="content-section">
-            <h2>7. Vulnerability Index</h2>
+            <h2>8. Vulnerability Index</h2>
             <p>
                 We constructed a Neighborhood Vulnerability Index (NVI) combining poverty rate, 
                 household income, shooting density, and transport time. The index examines whether 
@@ -339,14 +436,14 @@
             <figure class="figure-full">
                 <img src="figures/vulnerability_index_map.png" alt="Vulnerability index map">
                 <figcaption>
-                    <strong>Figure 6.</strong> Neighborhood Vulnerability Index showing 
+                    <strong>Figure 7.</strong> Neighborhood Vulnerability Index showing 
                     compound disadvantage across Philadelphia census tracts.
                 </figcaption>
             </figure>
         </section>
 
         <section class="content-section">
-            <h2>8. Policy Implications</h2>
+            <h2>9. Policy Implications</h2>
             
             <h3>Stop the Bleed Training Prioritization</h3>
             <p>
@@ -373,7 +470,7 @@
             <figure class="figure-full">
                 <img src="figures/stop_the_bleed_priority_map.png" alt="Stop the Bleed priority zones">
                 <figcaption>
-                    <strong>Figure 7.</strong> Priority zones for Stop the Bleed hemorrhage 
+                    <strong>Figure 8.</strong> Priority zones for Stop the Bleed hemorrhage 
                     control training, ranked by composite violence burden and transport time score.
                 </figcaption>
             </figure>

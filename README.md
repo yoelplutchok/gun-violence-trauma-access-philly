@@ -16,6 +16,7 @@
 | **Shootings in Deserts** | 1,659 (9.5% of total) |
 | **Temple Modeled Catchment** | 54.9% of shootings (nearest center) |
 | **Unexplained Racial Disparity** | 68.5% |
+| **Transport-Mortality Effect** | OR 1.015/min (p=0.005) |
 
 ### Critical Insight
 
@@ -25,6 +26,7 @@
 > - Black neighborhoods are actually 3.2 minutes *closer* to hospitals on average
 > - Black tracts experience 4.4x higher shooting density
 > - 68.5% of this disparity cannot be explained by poverty or income
+> - **Transport time matters:** Fatality rate rises from 20.0% (0-5 min) to 30.6% (20+ min)
 > - The problem is **violence burden**, not distance to care
 
 ---

@@ -1,0 +1,2 @@
+model,predictor,odds_ratio,ci_lower,ci_upper,p_value,n
+Transport Time Only,time_to_nearest (min),1.0148573095140279,1.0045364597461737,1.025284198180617,0.004686438583705861,17380
