@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trauma Desert: A Geospatial Analysis of Gun Violence and Trauma Access in Philadelphia</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #c53030;
+            --text: #1a202c;
+            --text-light: #4a5568;
+            --bg: #ffffff;
+            --bg-alt: #f7fafc;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .paper-header {
+            text-align: center;
+            padding: 2rem 0 3rem;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .author {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .affiliation {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .abstract {
+            background: var(--bg-alt);
+            padding: 1.5rem 2rem;
+            border-left: 4px solid var(--primary);
+            margin: 2rem 0;
+        }
+        
+        .abstract h2 {
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .abstract p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .keywords {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        strong {
+            color: var(--primary);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        tr:nth-child(even) {
+            background: var(--bg-alt);
+        }
+        
+        .table-caption {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.75rem;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+            border: 1px solid #90cdf4;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        
+        .finding-stat {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin: 0.5rem 0;
+        }
+        
+        .references {
+            font-size: 0.9rem;
+        }
+        
+        .references p {
+            padding-left: 2rem;
+            text-indent: -2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--primary);
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        @media print {
+            body {
+                font-size: 11pt;
+                padding: 0;
+            }
+            
+            figure {
+                page-break-inside: avoid;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="paper-header">
+        <h1>The Trauma Desert: Spatial Mismatch Between Gun Violence Burden and Level I Trauma Access in Philadelphia</h1>
+        <p class="subtitle">A Geospatial Analysis of 17,380 Shooting Incidents, 2015-2025</p>
+        <p class="author"><strong>Yoel Y. Plutchok</strong></p>
+        <p class="affiliation">January 2026</p>
+    </header>
+
+    <section class="abstract">
+        <h2>Abstract</h2>
+        <p>
+            <strong>Background:</strong> The "golden hour" principle in trauma care establishes that survival rates for penetrating injuries decline significantly when definitive surgical care is delayed. This study examines whether Philadelphia neighborhoods with the highest gun violence burden face systematic barriers to timely Level I trauma care.
+        </p>
+        <p>
+            <strong>Methods:</strong> We analyzed 17,380 shooting incidents in Philadelphia (2015-2025) using bivariate classification of shooting density and modeled transport time to the nearest Level I Adult trauma center. We tested the association between transport time and fatality using logistic regression.
+        </p>
+        <p>
+            <strong>Results:</strong> We identified 18 census tracts (4.4%) as trauma deserts, yet 99.6% of all shootings occurred within 20 minutes of Level I trauma care. Predominantly Black tracts were actually 3.2 minutes closer to trauma centers but experienced 4.4-fold higher shooting density. Fatality rates increased from 20.0% (0-5 min) to 30.6% (20+ min) with transport time (OR=1.015/min, p=0.005).
+        </p>
+        <p>
+            <strong>Conclusions:</strong> The trauma desert phenomenon is driven by violence concentration rather than geographic access barriers. While transport time affects mortality, the disparity in trauma burden—not distance to care—represents the primary equity concern.
+        </p>
+        <p class="keywords">
+            <strong>Keywords:</strong> trauma systems, gun violence, health disparities, geographic access, golden hour, penetrating trauma, Philadelphia
+        </p>
+    </section>
+
+    <h2>Introduction</h2>
+    
+    <h3>The Golden Hour and Trauma Care Access</h3>
+    <p>
+        The concept of the "golden hour" has guided trauma system development since its articulation by R. Adams Cowley. For penetrating trauma such as gunshot wounds, the critical window may be even narrower—the first 10-20 minutes are essential for hemorrhage control and definitive surgical intervention. Level I trauma centers provide the highest capability for treating severe injuries, with 24/7 surgical coverage and comprehensive resources.
+    </p>
+    <p>
+        Geographic access to trauma care has emerged as a significant determinant of outcomes. Research has demonstrated that access to Level I trauma centers within 60 minutes significantly reduces mortality for severely injured patients, and that patients transported directly to Level I centers have substantially lower mortality than those taken to non-trauma facilities.
+    </p>
+    
+    <h3>Gun Violence as a Public Health Crisis</h3>
+    <p>
+        Philadelphia experiences among the highest rates of gun violence of any major American city. Between 2015 and 2025, the city recorded over 17,000 shooting incidents, with a pronounced spike during 2020-2021. Gun violence is heavily concentrated in specific neighborhoods that also experience other forms of structural disadvantage.
+    </p>
+    
+    <h3>Research Question</h3>
+    <div class="highlight-box">
+        <p>
+            <strong>Is there a spatial mismatch between gun violence burden and timely access to Level I trauma care in Philadelphia, and does this mismatch disproportionately affect predominantly Black and low-income communities?</strong>
+        </p>
+    </div>
+
+    <h2>Methods</h2>
+    
+    <h3>Study Design and Data Sources</h3>
+    <p>
+        We conducted a retrospective geospatial analysis of 17,380 shooting incidents in Philadelphia from January 2015 through December 2025. Shooting data was obtained from OpenDataPhilly. Trauma center locations were verified through the Pennsylvania Trauma Systems Foundation. Drive-time isochrones were generated via the OpenRouteService API. Census tract demographics were obtained from the American Community Survey.
+    </p>
+    
+    <h3>Bivariate Classification</h3>
+    <p>
+        Tracts were classified using a 3×3 matrix combining shooting density terciles and transport time terciles. "Trauma deserts" were defined as Class 9 tracts—those in the highest tercile for both dimensions.
+    </p>
+    
+    <div class="table-caption">Table 1. Bivariate Classification Matrix</div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Good Access</th>
+                <th>Moderate</th>
+                <th>Poor Access</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Low Violence</strong></td>
+                <td>Class 1</td>
+                <td>Class 2</td>
+                <td>Class 3</td>
+            </tr>
+            <tr>
+                <td><strong>Moderate</strong></td>
+                <td>Class 4</td>
+                <td>Class 5</td>
+                <td>Class 6</td>
+            </tr>
+            <tr>
+                <td><strong>High Violence</strong></td>
+                <td>Class 7</td>
+                <td>Class 8</td>
+                <td style="background: #c53030; color: white;"><strong>Class 9 (Trauma Desert)</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Results</h2>
+    
+    <h3>Trauma Desert Identification</h3>
+    <p>
+        The bivariate classification identified <strong>18 census tracts (4.4% of the city)</strong> as trauma deserts, containing 83,159 residents who experienced 1,659 shootings (9.5% of total).
+    </p>
+    
+    <figure>
+        <img src="../figures/bivariate_map.png" alt="Bivariate choropleth map">
+        <figcaption>
+            <strong>Figure 1.</strong> Bivariate choropleth map showing shooting density versus transport time. Dark teal indicates trauma deserts (Class 9). Red markers indicate Level I Adult trauma centers.
+        </figcaption>
+    </figure>
+    
+    <h3>Golden Hour Coverage</h3>
+    <div class="highlight-box">
+        <p><span class="finding-stat">99.6%</span></p>
+        <p>of shootings occurred within 20 minutes of Level I trauma care</p>
+    </div>
+    
+    <div class="table-caption">Table 2. Distribution of Shootings by Transport Time</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Transport Time</th>
+                <th>Shootings</th>
+                <th>Percentage</th>
+                <th>Cumulative</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0-5 minutes</td><td>6,319</td><td>36.4%</td><td>36.4%</td></tr>
+            <tr><td>5-10 minutes</td><td>9,405</td><td>54.1%</td><td>90.5%</td></tr>
+            <tr><td>10-15 minutes</td><td>1,334</td><td>7.7%</td><td>98.2%</td></tr>
+            <tr><td>15-20 minutes</td><td>260</td><td>1.5%</td><td>99.6%</td></tr>
+            <tr><td>20+ minutes</td><td>62</td><td>0.4%</td><td>100.0%</td></tr>
+        </tbody>
+    </table>
+    
+    <h3>Transport Time and Fatality Outcomes</h3>
+    <p>
+        Fatality rate increased monotonically from 20.0% in areas closest to trauma care to 30.6% in areas 20+ minutes away—an absolute difference of 10.7 percentage points.
+    </p>
+    
+    <div class="table-caption">Table 3. Fatality Rate by Transport Time</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Transport Time</th>
+                <th>Fatal</th>
+                <th>Total</th>
+                <th>Fatality Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0-5 minutes</td><td>1,263</td><td>6,319</td><td>20.0%</td></tr>
+            <tr><td>5-10 minutes</td><td>1,952</td><td>9,405</td><td>20.8%</td></tr>
+            <tr><td>10-15 minutes</td><td>285</td><td>1,334</td><td>21.4%</td></tr>
+            <tr><td>15-20 minutes</td><td>69</td><td>260</td><td>26.5%</td></tr>
+            <tr style="background: #fed7d7;"><td><strong>20+ minutes</strong></td><td><strong>19</strong></td><td><strong>62</strong></td><td><strong>30.6%</strong></td></tr>
+        </tbody>
+    </table>
+    
+    <p><strong>Statistical Analysis:</strong></p>
+    <ul>
+        <li>Chi-square test: χ² = 11.46, df = 4, p = 0.022</li>
+        <li>Logistic regression: OR = 1.015 per minute (95% CI: 1.005-1.025, p = 0.005)</li>
+    </ul>
+    
+    <figure>
+        <img src="../figures/fatality_transport_analysis.png" alt="Fatality by transport time">
+        <figcaption>
+            <strong>Figure 2.</strong> Shooting fatality rate by transport time category. Fatality rate increases monotonically with transport time (p = 0.005).
+        </figcaption>
+    </figure>
+    
+    <h3>Demographic Disparities</h3>
+    
+    <div class="table-caption">Table 4. Demographics: Trauma Deserts vs. Other Tracts</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Trauma Deserts</th>
+                <th>Other Tracts</th>
+                <th>p-value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Mean % Black</td><td>76.0%</td><td>38.3%</td><td>&lt;0.0001</td></tr>
+            <tr><td>Mean % Poverty</td><td>30.8%</td><td>21.8%</td><td>&lt;0.001</td></tr>
+        </tbody>
+    </table>
+    
+    <p>
+        However, <strong>predominantly Black neighborhoods are actually closer to Level I trauma centers on average</strong> (r = -0.25, p &lt; 0.0001). This paradox is explained by the location of trauma centers in or near predominantly Black neighborhoods.
+    </p>
+    
+    <h3>Oaxaca-Blinder Decomposition</h3>
+    
+    <div class="highlight-box">
+        <p><span class="finding-stat">68.5%</span></p>
+        <p>of the shooting density disparity between Black and other tracts is <strong>unexplained</strong> by observable socioeconomic factors</p>
+    </div>
+    
+    <p>
+        Predominantly Black tracts experience <strong>4.4-fold higher shooting density</strong>. Only 31.5% of this disparity is explained by differences in poverty and income.
+    </p>
+    
+    <figure>
+        <img src="../figures/oaxaca_decomposition.png" alt="Oaxaca decomposition">
+        <figcaption>
+            <strong>Figure 3.</strong> Oaxaca-Blinder decomposition of the shooting density gap. The majority of disparity is unexplained by observable characteristics.
+        </figcaption>
+    </figure>
+    
+    <h3>Hospital Burden Distribution</h3>
+    
+    <div class="table-caption">Table 5. Modeled Hospital Catchment</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Hospital</th>
+                <th>Tracts Served</th>
+                <th>Shootings</th>
+                <th>% of City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #fed7d7;"><td><strong>Temple University Hospital</strong></td><td>168</td><td>9,544</td><td><strong>54.9%</strong></td></tr>
+            <tr><td>Penn Presbyterian</td><td>95</td><td>4,677</td><td>26.9%</td></tr>
+            <tr><td>Jefferson Einstein</td><td>83</td><td>2,262</td><td>13.0%</td></tr>
+            <tr><td>Thomas Jefferson</td><td>62</td><td>897</td><td>5.2%</td></tr>
+        </tbody>
+    </table>
+    
+    <figure>
+        <img src="../figures/patient_flow_map.png" alt="Patient flow map">
+        <figcaption>
+            <strong>Figure 4.</strong> Modeled patient flow from tract centroids to nearest Level I trauma center. Line thickness proportional to shooting count.
+        </figcaption>
+    </figure>
+    
+    <h3>Temporal Patterns</h3>
+    
+    <figure>
+        <img src="../figures/temporal_trends.png" alt="Temporal trends">
+        <figcaption>
+            <strong>Figure 5.</strong> Annual shooting counts, 2015-2025. Peak year 2021 (2,338 shootings) represented a near-doubling from pre-pandemic levels.
+        </figcaption>
+    </figure>
+
+    <h2>Discussion</h2>
+    
+    <h3>Principal Findings</h3>
+    <p>
+        This study reveals a paradox: while 18 census tracts meet our criteria for trauma desert status, <strong>the primary driver of elevated trauma burden is violence concentration, not geographic access barriers.</strong>
+    </p>
+    <p>Three key findings support this interpretation:</p>
+    <ol>
+        <li><strong>Excellent geographic coverage:</strong> 99.6% of shootings occur within 20 minutes of Level I trauma care.</li>
+        <li><strong>Inverse access-race relationship:</strong> Predominantly Black neighborhoods are closer to trauma centers, not farther.</li>
+        <li><strong>Violence concentration:</strong> The 4.4-fold disparity in shooting density is largely unexplained by socioeconomic factors.</li>
+    </ol>
+    
+    <h3>Transport Time Still Matters</h3>
+    <p>
+        Our finding that fatality rates increase from 20.0% to 30.6% across the transport time gradient confirms clinical relevance. However, because so few shootings occur in high-transport-time areas, improving geographic access alone would have limited population-level impact.
+    </p>
+    
+    <h3>Policy Implications</h3>
+    <p>
+        Traditional approaches—building new facilities or redistributing EMS resources—would have limited impact given excellent existing coverage. Interventions should focus on:
+    </p>
+    <ul>
+        <li><strong>Violence prevention:</strong> Addressing root causes through community-based intervention programs</li>
+        <li><strong>Community hemorrhage control:</strong> Expanding "Stop the Bleed" training in high-burden neighborhoods</li>
+        <li><strong>Hospital capacity:</strong> Ensuring Temple and Penn Presbyterian have adequate resources</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        The trauma desert phenomenon in Philadelphia is driven primarily by extreme concentration of gun violence rather than geographic access barriers. While transport time significantly affects mortality, the 4.4-fold disparity in shooting density—68.5% unexplained by socioeconomic factors—represents a fundamental health equity crisis that cannot be addressed through trauma system redesign alone. Reducing gun violence burden in affected neighborhoods must be the primary policy objective.
+    </p>
+
+    <h2>References</h2>
+    <div class="references">
+        <p>Brown JB, Rosengart MR, Forsythe RM, et al. Not all prehospital time is equal: Influence of scene time on mortality. <em>Annals of Surgery</em>. 2016;264(6):1000-1007.</p>
+        <p>Byrne JP, Mann NC, Dai M, et al. Association between emergency medical service response time and motor vehicle crash mortality. <em>JAMA Surgery</em>. 2019;154(4):286-293.</p>
+        <p>Newgard CD, Schmicker RH, Hedges JR, et al. Emergency medical services intervals and survival in trauma: Assessment of the "golden hour." <em>Annals of Emergency Medicine</em>. 2010;55(3):235-246.</p>
+        <p>Wandling M, Nathens AB, Shapiro MB, Haut ER. Police transport versus ground EMS: A trauma system-level evaluation. <em>Journal of Trauma and Acute Care Surgery</em>. 2016;81(5):931-935.</p>
+    </div>
+
+    <footer>
+        <p><strong>Data Availability:</strong> All code and processed data available at:<br>
+        <a href="https://github.com/yoelplutchok/gun-violence-trauma-access-philly">github.com/yoelplutchok/gun-violence-trauma-access-philly</a></p>
+        <p style="margin-top: 1rem;">Manuscript prepared January 2026</p>
+    </footer>
+</body>
+</html>
+
